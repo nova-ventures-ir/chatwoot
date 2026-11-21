@@ -37,6 +37,10 @@ const props = defineProps({
     type: Boolean,
     default: false,
   },
+  embedMode: {
+    type: Boolean,
+    default: false,
+  },
 });
 
 const emit = defineEmits([
@@ -1009,6 +1013,7 @@ const menuItems = computed(() => {
       :class="isEffectivelyCollapsed ? 'mt-3 mb-6 gap-4' : 'mt-1 mb-4 gap-2'"
     >
       <div
+        v-if="!props.embedMode"
         class="flex gap-2 items-center min-w-0"
         :class="{
           'justify-center px-1': isEffectivelyCollapsed,
@@ -1018,6 +1023,7 @@ const menuItems = computed(() => {
         <template v-if="isEffectivelyCollapsed">
           <SidebarAccountSwitcher
             is-collapsed
+            :embed-mode="props.embedMode"
             @show-create-account-modal="emit('showCreateAccountModal')"
           />
         </template>
@@ -1028,6 +1034,7 @@ const menuItems = computed(() => {
           <div class="flex-shrink-0 w-px h-3 bg-n-strong" />
           <SidebarAccountSwitcher
             class="flex-grow -mx-1 min-w-0"
+            :embed-mode="props.embedMode"
             @show-create-account-modal="emit('showCreateAccountModal')"
           />
         </template>
@@ -1142,6 +1149,7 @@ const menuItems = computed(() => {
       >
         <SidebarProfileMenu
           :is-collapsed="isEffectivelyCollapsed"
+          :embed-mode="props.embedMode"
           @open-key-shortcut-modal="emit('openKeyShortcutModal')"
         />
       </div>

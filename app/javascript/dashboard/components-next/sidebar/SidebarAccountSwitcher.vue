@@ -14,8 +14,12 @@ import {
   DropdownItem,
 } from 'next/dropdown-menu/base';
 
-defineProps({
+const props = defineProps({
   isCollapsed: {
+    type: Boolean,
+    default: false,
+  },
+  embedMode: {
     type: Boolean,
     default: false,
   },
@@ -31,7 +35,10 @@ const globalConfig = useMapGetter('globalConfig/get');
 const userAccounts = useMapGetter('getUserAccounts');
 
 const showAccountSwitcher = computed(
-  () => userAccounts.value.length > 1 && currentAccount.value.name
+  () =>
+    !props.embedMode &&
+    userAccounts.value.length > 1 &&
+    currentAccount.value.name
 );
 
 const sortedCurrentUserAccounts = computed(() => {
@@ -59,7 +66,7 @@ const emitNewAccount = () => {
         class="grid flex-shrink-0 place-content-center p-2 rounded-lg cursor-pointer hover:bg-n-alpha-1"
         :class="{ 'bg-n-alpha-1': isOpen }"
         :title="currentAccount.name"
-        @click="toggle"
+        @click="embedMode ? undefined : toggle()"
       >
         <Logo class="size-7" />
       </button>
@@ -94,7 +101,7 @@ const emitNewAccount = () => {
       </button>
     </template>
     <DropdownBody
-      v-if="showAccountSwitcher || isCollapsed"
+      v-if="!embedMode && (showAccountSwitcher || isCollapsed)"
       class="min-w-80 z-50"
     >
       <DropdownSection :title="t('SIDEBAR_ITEMS.SWITCH_ACCOUNT')">

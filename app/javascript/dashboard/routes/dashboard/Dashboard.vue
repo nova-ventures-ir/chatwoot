@@ -13,6 +13,10 @@ import { useWindowSize } from '@vueuse/core';
 
 import wootConstants from 'dashboard/constants/globals';
 import { isUpgradePageBypassRoute } from 'dashboard/helper/routeHelpers';
+import {
+  isEmbedMode as readEmbedMode,
+  rememberEmbedMode,
+} from 'dashboard/helper/embedMode';
 
 const CommandBar = defineAsyncComponent(
   () => import('./commands/commandbar.vue')
@@ -92,6 +96,9 @@ export default {
       } = this.uiSettings;
       return conversationDisplayType;
     },
+    isEmbedMode() {
+      return this.$route.query.embed === '1' || readEmbedMode();
+    },
   },
   watch: {
     isSmallScreen: {
@@ -109,6 +116,9 @@ export default {
       },
       immediate: true,
     },
+  },
+  created() {
+    rememberEmbedMode(this.$route);
   },
   methods: {
     toggleMobileSidebar() {
@@ -141,6 +151,7 @@ export default {
   <div class="flex flex-grow overflow-hidden text-n-slate-12">
     <NextSidebar
       :is-mobile-sidebar-open="isMobileSidebarOpen"
+      :embed-mode="isEmbedMode"
       @toggle-account-modal="toggleAccountModal"
       @open-key-shortcut-modal="toggleKeyShortcutModal"
       @close-key-shortcut-modal="closeKeyShortcutModal"
@@ -152,6 +163,7 @@ export default {
       class="relative flex flex-1 h-full w-full min-h-0 px-0 overflow-hidden bg-n-surface-1"
     >
       <UpgradePage
+        v-if="!isEmbedMode"
         v-show="showUpgradePage"
         ref="upgradePageRef"
         :bypass-upgrade-page="bypassUpgradePage"
@@ -161,19 +173,20 @@ export default {
           @toggle="toggleMobileSidebar"
         />
       </UpgradePage>
-      <template v-if="!showUpgradePage">
+      <template v-if="isEmbedMode || !showUpgradePage">
         <router-view />
-        <CopilotLauncher />
+        <CopilotLauncher v-if="!isEmbedMode" />
         <MobileSidebarLauncher
           :is-mobile-sidebar-open="isMobileSidebarOpen"
           @toggle="toggleMobileSidebar"
         />
-        <CopilotContainer />
+        <CopilotContainer v-if="!isEmbedMode" />
         <FloatingCallWidget v-if="hasActiveCall || hasIncomingCall" />
       </template>
       <CommandBarV2 v-if="hasCommandBarV2" :is-paywalled="isAccountPaywalled" />
       <CommandBar v-else :is-paywalled="isAccountPaywalled" />
       <AddAccountModal
+        v-if="!isEmbedMode"
         :show="showCreateAccountModal"
         @close-account-create-modal="closeCreateAccountModal"
       />
