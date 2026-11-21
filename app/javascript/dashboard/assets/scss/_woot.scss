@@ -18,25 +18,112 @@
 // Plugins
 @import 'plugins/date-picker';
 
+@font-face {
+  font-family: 'IRANSansX';
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url('/fonts/iransansx/IRANSansX-Thin.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'IRANSansX';
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: url('/fonts/iransansx/IRANSansX-UltraLight.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'IRANSansX';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('/fonts/iransansx/IRANSansX-Light.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'IRANSansX';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/iransansx/IRANSansX-Regular.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'IRANSansX';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/fonts/iransansx/IRANSansX-Medium.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'IRANSansX';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/fonts/iransansx/IRANSansX-DemiBold.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'IRANSansX';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/iransansx/IRANSansX-Bold.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'IRANSansX';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url('/fonts/iransansx/IRANSansX-ExtraBold.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'IRANSansX';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url('/fonts/iransansx/IRANSansX-Black.woff2') format('woff2');
+}
+
 html,
 body {
-  font-family:
-    'Inter',
-    -apple-system,
-    system-ui,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Tahoma,
-    Arial,
-    sans-serif !important;
+  font-family: 'IRANSansX', Tahoma, sans-serif !important;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   height: 100%;
   margin: 0;
   padding: 0;
   width: 100%;
+}
+
+.font-inter,
+.font-interDisplay,
+.font-sans {
+  font-family: 'IRANSansX', Tahoma, sans-serif !important;
+}
+
+[dir='rtl'] {
+  font-feature-settings: 'ss03';
+
+  // Point back/forward glyphs toward the start edge. A parent that already
+  // mirrors itself keeps that transform, so the glyph is not flipped twice.
+  :is(
+    .i-lucide-chevron-left,
+    .i-lucide-chevron-right,
+    .i-lucide-arrow-left,
+    .i-lucide-arrow-right,
+    .rtl-directional-icon
+  ) {
+    transform: scaleX(-1);
+  }
+
+  :is(.rtl\:rotate-180, .rtl\:-scale-x-100)
+    :is(
+      .i-lucide-chevron-left,
+      .i-lucide-chevron-right,
+      .i-lucide-arrow-left,
+      .i-lucide-arrow-right,
+      .rtl-directional-icon
+    ) {
+    transform: none;
+  }
 }
 
 .tooltip {
