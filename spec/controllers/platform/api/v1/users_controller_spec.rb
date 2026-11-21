@@ -180,10 +180,11 @@ RSpec.describe 'Platform Users API', type: :request do
         expect(platform_app.platform_app_permissibles.first.permissible_id).to eq data['id']
       end
 
-      it 'returns the existing user when it is a permissible object' do
-        existing_user = create(:user, name: 'old test', email: 'test@test.com')
+      it 'returns the existing user when the same nova_user_id is already permissible' do
+        existing_user = create(:user, name: 'old test', email: 'test@test.com', custom_attributes: { nova_user_id: 'user-1' })
         create(:platform_app_permissible, platform_app: platform_app, permissible: existing_user)
-        post '/platform/api/v1/users/', params: { name: 'test', email: 'test@test.com', password: 'Password1!' },
+        post '/platform/api/v1/users/', params: { name: 'test', email: 'test@test.com', password: 'Password1!',
+                                                  custom_attributes: { nova_user_id: 'user-1' } },
                                         headers: { api_access_token: platform_app.access_token.token }, as: :json
 
         expect(response).to have_http_status(:success)
@@ -193,14 +194,56 @@ RSpec.describe 'Platform Users API', type: :request do
         expect(platform_app.platform_app_permissibles.count).to eq(1)
       end
 
-      it 'does not return an existing user when its not a permissible object' do
-        create(:user, name: 'old test', email: 'test@test.com')
-        post '/platform/api/v1/users/', params: { name: 'test', email: 'Test@test.com', password: 'Password1!' },
+      it 'does not return a matching nova user when it is not a permissible object' do
+        create(:user, name: 'old test', email: 'test@test.com', custom_attributes: { nova_user_id: 'user-1' })
+        post '/platform/api/v1/users/', params: { name: 'test', email: 'Test@test.com', password: 'Password1!',
+                                                  custom_attributes: { nova_user_id: 'user-1' } },
                                         headers: { api_access_token: platform_app.access_token.token }, as: :json
 
         expect(response).to have_http_status(:unauthorized)
         expect(response.parsed_body).not_to have_key('access_token')
         expect(platform_app.platform_app_permissibles).to be_empty
+      end
+
+      it 'persists nova_user_id when the email is new' do
+        post '/platform/api/v1/users/', params: { name: 'test', email: 'agent.user-1@support.invalid', password: 'Password1!',
+                                                  custom_attributes: { nova_user_id: 'user-1' } },
+                                        headers: { api_access_token: platform_app.access_token.token }, as: :json
+
+        expect(response).to have_http_status(:success)
+        expect(response.parsed_body['custom_attributes']['nova_user_id']).to eq('user-1')
+        expect(User.from_email('agent.user-1@support.invalid').custom_attributes['nova_user_id']).to eq('user-1')
+      end
+
+      it 'does not adopt an existing user that has no nova_user_id' do
+        existing_user = create(:user, name: 'old test', email: 'taken@chatwoot.com', custom_attributes: { test: 'keep' })
+        create(:platform_app_permissible, platform_app: platform_app, permissible: existing_user)
+
+        post '/platform/api/v1/users/', params: { name: 'test', email: 'taken@chatwoot.com', password: 'Password1!',
+                                                  custom_attributes: { nova_user_id: 'user-1' } },
+                                        headers: { api_access_token: platform_app.access_token.token }, as: :json
+
+        expect(response).to have_http_status(:unprocessable_entity)
+        expect(response.parsed_body).to include('message' => 'Email has already been taken', 'attributes' => ['email'])
+        expect(response.parsed_body).not_to have_key('id')
+        expect(response.parsed_body).not_to have_key('access_token')
+        expect(existing_user.reload).to have_attributes(name: 'old test', custom_attributes: { 'test' => 'keep' })
+        expect(platform_app.platform_app_permissibles.count).to eq(1)
+      end
+
+      it 'does not adopt an existing user tagged with a different nova_user_id' do
+        existing_user = create(:user, name: 'other agent', email: 'taken@chatwoot.com',
+                                      custom_attributes: { nova_user_id: 'user-2' })
+        create(:platform_app_permissible, platform_app: platform_app, permissible: existing_user)
+
+        post '/platform/api/v1/users/', params: { name: 'test', email: 'taken@chatwoot.com', password: 'Password1!',
+                                                  custom_attributes: { nova_user_id: 'user-1' } },
+                                        headers: { api_access_token: platform_app.access_token.token }, as: :json
+
+        expect(response).to have_http_status(:unprocessable_entity)
+        expect(response.parsed_body).not_to have_key('id')
+        expect(existing_user.reload.name).to eq('other agent')
+        expect(existing_user.custom_attributes['nova_user_id']).to eq('user-2')
       end
     end
   end
