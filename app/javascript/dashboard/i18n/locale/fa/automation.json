@@ -1,13 +1,13 @@
 {
   "AUTOMATION": {
     "HEADER": "خودکارسازی",
-    "DESCRIPTION": "Automation can replace and streamline existing processes that require manual effort, such as adding labels and assigning conversations to the most suitable agent. This allows the team to focus on their strengths while reducing time spent on routine tasks.",
-    "LEARN_MORE": "Learn more about automation",
-    "COUNT": "{n} automation | {n} automations",
-    "HEADER_BTN_TXT": "Create Automation",
+    "DESCRIPTION": "خودکارسازی کارهای دستی مثل افزودن برچسب و واگذاری گفتگو را انجام می‌دهد تا تیم روی کار اصلی بماند.",
+    "LEARN_MORE": "درباره خودکارسازی بیشتر بدانید",
+    "COUNT": "{n} قاعده | {n} قاعده",
+    "HEADER_BTN_TXT": "ساخت قاعده",
     "LOADING": "واکشی قوانین اتوماسیون",
-    "SEARCH_PLACEHOLDER": "Search automation rules...",
-    "NO_RESULTS": "No automation rules found matching your search",
+    "SEARCH_PLACEHOLDER": "جستجوی قاعده…",
+    "NO_RESULTS": "قاعده‌ای با این جستجو پیدا نشد",
     "ADD": {
       "TITLE": "افزودن قانون خودکارسازی",
       "SUBMIT": "ايجاد كردن",
@@ -29,54 +29,54 @@
           "ERROR": "رویداد مورد نیاز است"
         },
         "MONITOR": {
-          "LABEL": "Monitor",
-          "PLACEHOLDER": "Select a live monitor",
-          "ERROR": "Select a live monitor",
-          "FETCH_FAILED": "Could not load monitors. Try again later.",
-          "API_UNAVAILABLE": "This monitor is no longer available. Select a live monitor and try again.",
-          "EMPTY": "No live monitors yet. Create or resume a monitor to use this event.",
-          "GO_TO_MONITORS": "Go to monitors",
-          "RETRY": "Retry",
-          "UNAVAILABLE": "Unavailable monitor",
-          "UNAVAILABLE_HELP": "This monitor is unavailable for automation. Select a live monitor to activate this rule.",
-          "HELP": "Runs once when the monitor first matches a conversation from new live activity. Historical scans do not trigger actions."
+          "LABEL": "پایش",
+          "PLACEHOLDER": "یک پایش فعال انتخاب کنید",
+          "ERROR": "یک پایش فعال انتخاب کنید",
+          "FETCH_FAILED": "پایش‌ها بارگذاری نشد. بعداً تلاش کنید.",
+          "API_UNAVAILABLE": "این پایش دیگر در دسترس نیست.",
+          "EMPTY": "هنوز پایش فعالی نیست.",
+          "GO_TO_MONITORS": "رفتن به پایش‌ها",
+          "RETRY": "تلاش دوباره",
+          "UNAVAILABLE": "پایش در دسترس نیست",
+          "UNAVAILABLE_HELP": "این پایش برای خودکارسازی نیست. یک پایش فعال انتخاب کنید.",
+          "HELP": "یک‌بار وقتی پایش برای اولین بار گفتگوی تازه‌ای را پیدا کند اجرا می‌شود."
         },
         "RUN_TYPE": {
-          "LABEL": "When should this rule run?",
+          "LABEL": "این قاعده کی اجرا شود؟",
           "OPTIONS": {
             "INSTANT": {
-              "LABEL": "Run instantly",
-              "DESCRIPTION": "Runs the moment an event happens, as long as the conditions match."
+              "LABEL": "اجرای فوری",
+              "DESCRIPTION": "همان لحظه رویداد، اگر شرط‌ها برقرار باشد."
             },
             "WAIT": {
-              "LABEL": "Run after a wait",
-              "DESCRIPTION": "Waits for a set time and runs only if things are still the same. If they change, the rule is skipped."
+              "LABEL": "اجرا بعد از انتظار",
+              "DESCRIPTION": "مدتی صبر می‌کند و فقط اگر وضعیت همان باشد اجرا می‌شود."
             }
           }
         },
         "WAIT": {
-          "LABEL": "Wait condition",
-          "WHEN_LABEL": "When",
-          "STATUS_LABEL": "Status is",
-          "FOR_LABEL": "For",
+          "LABEL": "شرط انتظار",
+          "WHEN_LABEL": "وقتی",
+          "STATUS_LABEL": "وضعیت",
+          "FOR_LABEL": "به مدت",
           "INBOX_LABEL": "صندوق ورودی",
-          "ERROR": "The wait must be between 10 minutes and 30 days",
+          "ERROR": "انتظار باید بین ۱۰ دقیقه و ۳۰ روز باشد",
           "OPTIONS": {
-            "CONVERSATION_STATUS": "Conversation stays in a status",
-            "CUSTOMER_UNRESPONSIVE": "Customer hasn't replied",
-            "AGENT_UNRESPONSIVE": "No teammate has replied"
+            "CONVERSATION_STATUS": "گفتگو در یک وضعیت بماند",
+            "CUSTOMER_UNRESPONSIVE": "مشتری پاسخ نداده",
+            "AGENT_UNRESPONSIVE": "هیچ کارشناسی پاسخ نداده"
           },
           "DURATION": {
-            "MINUTES": "{count} minute | {count} minutes",
-            "HOURS": "{count} hour | {count} hours",
-            "DAYS": "{count} day | {count} days"
+            "MINUTES": "{count} دقیقه | {count} دقیقه",
+            "HOURS": "{count} ساعت | {count} ساعت",
+            "DAYS": "{count} روز | {count} روز"
           },
           "EXPLANATION": {
-            "CONVERSATION_STATUS": "The clock starts when a conversation moves into this status. If it is still there {duration} later, the actions below run. If the status changes before then, nothing happens.",
-            "CUSTOMER_UNRESPONSIVE": "The clock starts when a teammate replies. If the customer hasn't written back {duration} later, the actions below run. If they do reply, nothing happens, and the next teammate reply starts the clock again.",
-            "AGENT_UNRESPONSIVE": "The clock starts when a customer sends a message. If no teammate has replied {duration} later, the actions below run. If someone replies before then, nothing happens."
+            "CONVERSATION_STATUS": "زمان از وقتی شروع می‌شود که گفتگو به این وضعیت برود. اگر {duration} بعد هنوز همان باشد، کارها اجرا می‌شود.",
+            "CUSTOMER_UNRESPONSIVE": "زمان از پاسخ کارشناس شروع می‌شود. اگر مشتری تا {duration} بعد جواب ندهد، کارها اجرا می‌شود.",
+            "AGENT_UNRESPONSIVE": "زمان از پیام مشتری شروع می‌شود. اگر تا {duration} بعد کارشناسی جواب ندهد، کارها اجرا می‌شود."
           },
-          "FOOTNOTE": "Only new activity starts a clock. Conversations already sitting in this state are picked up the next time something happens on them."
+          "FOOTNOTE": "فقط فعالیت تازه زمان را شروع می‌کند."
         },
         "CONDITIONS": {
           "LABEL": "شرایط"
@@ -99,16 +99,16 @@
         "CREATED_ON": "ایجاد شده در"
       },
       "404": "هیچ قانون اتوماسیون یافت نشد",
-      "404_DELAYED": "No rules run after a wait yet",
+      "404_DELAYED": "هنوز قاعده‌ای با تأخیر نیست",
       "TABS": {
-        "INSTANT": "Runs instantly",
-        "DELAYED": "Runs after a wait"
+        "INSTANT": "اجرای فوری",
+        "DELAYED": "اجرا بعد از انتظار"
       },
-      "DELAY_BADGE": "Runs after {delay}",
-      "MONITOR_PAUSED": "Monitor paused",
-      "MONITOR_DELETED": "Monitor deleted",
-      "MONITOR_UNAVAILABLE": "Monitor feature unavailable",
-      "DELAY_DISABLED_BANNER": "Delayed execution is turned off for this account, so the rules below that run after a wait are paused until it is turned back on."
+      "DELAY_BADGE": "بعد از {delay} اجرا می‌شود",
+      "MONITOR_PAUSED": "پایش متوقف است",
+      "MONITOR_DELETED": "پایش حذف شده",
+      "MONITOR_UNAVAILABLE": "پایش در دسترس نیست",
+      "DELAY_DISABLED_BANNER": "اجرای تأخیری برای این حساب خاموش است و قاعده‌های زیر متوقف‌اند."
     },
     "DELETE": {
       "TITLE": "قانون اتوماسیون را حذف کنید",
@@ -153,16 +153,16 @@
       "CONTACT_CUSTOM_ATTR_LABEL": "ویژگی‌های سفارشی تماس",
       "CONVERSATION_CUSTOM_ATTR_LABEL": "ویژگی‌های سفارشی گفتگو",
       "PLACEHOLDERS": {
-        "CAPTAIN": "Describe what to look for, e.g. customer wants to cancel"
+        "CAPTAIN": "آنچه باید پیدا شود را بنویسید، مثلاً مشتری می‌خواهد لغو کند"
       }
     },
     "ACTION": {
       "DELETE_MESSAGE": "برای ذخیره باید حداقل یک اکشن داشته باشید",
       "TEAM_MESSAGE_INPUT_PLACEHOLDER": "پیام خود را اینجا وارد کنید",
       "TEAM_DROPDOWN_PLACEHOLDER": "انتخاب تیم‌ها",
-      "EMAIL_INPUT_PLACEHOLDER": "Enter email",
-      "URL_INPUT_PLACEHOLDER": "Enter URL",
-      "INSERT_CONTACT_EMAIL": "Use contact's email"
+      "EMAIL_INPUT_PLACEHOLDER": "ایمیل را بنویسید",
+      "URL_INPUT_PLACEHOLDER": "نشانی را بنویسید",
+      "INSERT_CONTACT_EMAIL": "استفاده از ایمیل مخاطب"
     },
     "TOGGLE": {
       "ACTIVATION_TITLE": "فعال کردن قانون اتوماسیون",
@@ -184,48 +184,48 @@
       "LABEL_UPLOAD_FAILED": "بارگذاری انجام نشد"
     },
     "ERRORS": {
-      "ATTRIBUTE_KEY_REQUIRED": "Attribute key is required",
-      "FILTER_OPERATOR_REQUIRED": "Filter operator is required",
+      "ATTRIBUTE_KEY_REQUIRED": "کلید ویژگی لازم است",
+      "FILTER_OPERATOR_REQUIRED": "عملگر فیلتر لازم است",
       "VALUE_REQUIRED": "مقدار الزامی است",
-      "VALUE_MUST_BE_BETWEEN_1_AND_998": "Value must be between 1 and 998",
-      "ACTION_PARAMETERS_REQUIRED": "Action parameters are required",
-      "ATLEAST_ONE_CONDITION_REQUIRED": "At least one condition is required",
-      "ATLEAST_ONE_ACTION_REQUIRED": "At least one action is required"
+      "VALUE_MUST_BE_BETWEEN_1_AND_998": "مقدار باید بین ۱ و ۹۹۸ باشد",
+      "ACTION_PARAMETERS_REQUIRED": "پارامترهای عمل لازم است",
+      "ATLEAST_ONE_CONDITION_REQUIRED": "حداقل یک شرط لازم است",
+      "ATLEAST_ONE_ACTION_REQUIRED": "حداقل یک عمل لازم است"
     },
     "NONE_OPTION": "هیچکدام",
-    "LAST_RESPONDING_AGENT": "Last Responding Agent",
+    "LAST_RESPONDING_AGENT": "آخرین کارشناس پاسخ‌دهنده",
     "EVENTS": {
       "CONVERSATION_CREATED": "گفتگو ایجاد شد",
       "CONVERSATION_UPDATED": "گفتگو به روز شد",
-      "MESSAGE_CREATED": "Message Created",
-      "CONVERSATION_RESOLVED": "Conversation Resolved",
-      "CONVERSATION_OPENED": "Conversation Opened",
-      "MONITOR_MATCHED": "Monitor Matched"
+      "MESSAGE_CREATED": "پیام ساخته شد",
+      "CONVERSATION_RESOLVED": "گفتگو حل شد",
+      "CONVERSATION_OPENED": "گفتگو باز شد",
+      "MONITOR_MATCHED": "پایش منطبق شد"
     },
     "ACTIONS": {
-      "ASSIGN_AGENT": "Assign to Agent",
-      "ASSIGN_TEAM": "Assign a Team",
-      "REMOVE_ASSIGNED_AGENT": "Remove Assigned Agent",
-      "REMOVE_ASSIGNED_TEAM": "Remove Assigned Team",
-      "ADD_LABEL": "Add a Label",
-      "REMOVE_LABEL": "Remove a Label",
-      "SEND_EMAIL_TO_TEAM": "Send an Email to Team",
-      "SEND_EMAIL_TRANSCRIPT": "Send an Email Transcript",
+      "ASSIGN_AGENT": "واگذاری به کارشناس",
+      "ASSIGN_TEAM": "واگذاری به تیم",
+      "REMOVE_ASSIGNED_AGENT": "برداشتن کارشناس",
+      "REMOVE_ASSIGNED_TEAM": "برداشتن تیم",
+      "ADD_LABEL": "افزودن برچسب",
+      "REMOVE_LABEL": "حذف برچسب",
+      "SEND_EMAIL_TO_TEAM": "ایمیل به تیم",
+      "SEND_EMAIL_TRANSCRIPT": "ارسال متن گفتگو با ایمیل",
       "MUTE_CONVERSATION": "بی‌صدا کردن گفتگو",
       "SNOOZE_CONVERSATION": "به تعویق انداختن مکالمه",
       "RESOLVE_CONVERSATION": "حل مکالمه",
-      "SEND_WEBHOOK_EVENT": "Send Webhook Event",
-      "SEND_ATTACHMENT": "Send Attachment",
-      "SEND_MESSAGE": "Send a Message",
-      "ADD_PRIVATE_NOTE": "Add a Private Note",
+      "SEND_WEBHOOK_EVENT": "ارسال رویداد وب‌هوک",
+      "SEND_ATTACHMENT": "ارسال پیوست",
+      "SEND_MESSAGE": "ارسال پیام",
+      "ADD_PRIVATE_NOTE": "افزودن یادداشت خصوصی",
       "CHANGE_PRIORITY": "تغییر اولویت",
       "ADD_SLA": "اضافه کردن SLA",
       "OPEN_CONVERSATION": "باز کردن گفتگو",
-      "PENDING_CONVERSATION": "Mark conversation as pending"
+      "PENDING_CONVERSATION": "علامت‌گذاری گفتگو به‌عنوان در انتظار"
     },
     "MESSAGE_TYPES": {
-      "INCOMING": "Incoming Message",
-      "OUTGOING": "Outgoing Message"
+      "INCOMING": "پیام ورودی",
+      "OUTGOING": "پیام خروجی"
     },
     "PRIORITY_TYPES": {
       "NONE": "هیچکدام",
@@ -235,24 +235,24 @@
       "URGENT": "فوری"
     },
     "ATTRIBUTES": {
-      "MESSAGE_TYPE": "Message Type",
+      "MESSAGE_TYPE": "نوع پیام",
       "PRIVATE_NOTE": "یادداشت خصوصی",
-      "MESSAGE_CONTAINS": "Message Content",
+      "MESSAGE_CONTAINS": "متن پیام",
       "EMAIL": "ایمیل",
       "INBOX": "صندوق ورودی",
-      "CONVERSATION_LANGUAGE": "Conversation Language",
+      "CONVERSATION_LANGUAGE": "زبان گفتگو",
       "PHONE_NUMBER": "شماره تلفن",
       "STATUS": "وضعیت",
       "BROWSER_LANGUAGE": "مرور زبان",
-      "MAIL_SUBJECT": "Email Subject",
+      "MAIL_SUBJECT": "موضوع ایمیل",
       "COUNTRY_NAME": "کشور",
       "COMPANY_NAME": "شرکت",
-      "REFERER_LINK": "Referrer Link",
+      "REFERER_LINK": "پیوند ارجاع",
       "ASSIGNEE_NAME": "مسئول",
       "TEAM_NAME": "تیم‌",
       "PRIORITY": "اولویت",
       "LABELS": "برچسب‌ها",
-      "CAPTAIN": "Captain"
+      "CAPTAIN": "کاپیتان"
     }
   }
 }

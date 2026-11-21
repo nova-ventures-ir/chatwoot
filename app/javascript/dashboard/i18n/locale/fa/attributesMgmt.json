@@ -1,13 +1,13 @@
 {
   "ATTRIBUTES_MGMT": {
     "HEADER": "ویژگی‌های سفارشی",
-    "HEADER_BTN_TXT": "اضافه کردن ویژگی سفارشی",
-    "LOADING": "واکشی ویژگی‌های سفارشی",
-    "DESCRIPTION": "A custom attribute tracks additional details about your contacts or conversations—such as the subscription plan or the date of their first purchase. You can add different types of custom attributes, such as text, lists, or numbers, to capture the specific information you need.",
-    "LEARN_MORE": "Learn more about custom attributes",
-    "COUNT": "{n} attribute | {n} attributes",
-    "SEARCH_PLACEHOLDER": "جستجو ویژگی ها...",
-    "NO_RESULTS": "No attributes found matching your search",
+    "HEADER_BTN_TXT": "افزودن ویژگی سفارشی",
+    "LOADING": "در حال دریافت ویژگی‌ها",
+    "DESCRIPTION": "ویژگی سفارشی جزئیات بیشتری از مخاطب، شرکت یا گفتگو را نگه می‌دارد؛ مثل طرح اشتراک یا تاریخ اولین خرید. می‌تواند متن، فهرست یا عدد باشد.",
+    "LEARN_MORE": "درباره ویژگی‌های سفارشی بیشتر بدانید",
+    "COUNT": "{n} ویژگی | {n} ویژگی",
+    "SEARCH_PLACEHOLDER": "جستجوی ویژگی…",
+    "NO_RESULTS": "ویژگی‌ای با این جستجو پیدا نشد",
     "ATTRIBUTE_MODELS": {
       "CONVERSATION": "گفتگو",
       "CONTACT": "مخاطب",

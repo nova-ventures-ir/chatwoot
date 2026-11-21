@@ -7,10 +7,10 @@
     },
     "CLOSE": "بستن",
     "BETA": "آزمایشی",
-    "BETA_DESCRIPTION": "This feature is in beta and may change as we improve it.",
-    "ACCEPT": "Accept",
-    "DISCARD": "Discard",
-    "PREFERRED": "Preferred"
+    "BETA_DESCRIPTION": "این قابلیت آزمایشی است و ممکن است تغییر کند.",
+    "ACCEPT": "پذیرفتن",
+    "DISCARD": "انصراف",
+    "PREFERRED": "ترجیحی"
   },
   "CHOICE_TOGGLE": {
     "YES": "بله",

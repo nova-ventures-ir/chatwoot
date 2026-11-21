@@ -3,13 +3,13 @@
     "HEADER": "ایجنت ها",
     "HEADER_BTN_TXT": "اضافه کردن ایجنت",
     "LOADING": "دریافت لیست ایجنت ها",
-    "DESCRIPTION": "An agent is a member of your customer support team who can view and respond to user messages. The list below shows all the agents in your account.",
-    "LEARN_MORE": "Learn about user roles",
+    "DESCRIPTION": "کارشناس عضوی از تیم پشتیبانی است که پیام کاربران را می‌بیند و پاسخ می‌دهد. فهرست زیر همه کارشناس‌های این حساب است.",
+    "LEARN_MORE": "درباره نقش‌ها بیشتر بدانید",
     "AGENT_TYPES": {
       "ADMINISTRATOR": "مدیرکل",
       "AGENT": "ایجنت"
     },
-    "COUNT": "{n} agent | {n} agents",
+    "COUNT": "{n} کارشناس | {n} کارشناس",
     "LIST": {
       "404": "در حال حاضر هیچ ایجنتی برای این حساب معرفی نشده است",
       "TITLE": "مدیریت ایجنت ها",
@@ -20,7 +20,7 @@
       "ACTIONS": "عملیات",
       "VERIFIED": "تایید شده",
       "VERIFICATION_PENDING": "در انتظار تایید",
-      "AVAILABLE_CUSTOM_ROLE": "Available custom role permissions"
+      "AVAILABLE_CUSTOM_ROLE": "دسترسی‌های نقش سفارشی"
     },
     "ADD": {
       "TITLE": "اضافه کردن ایجنت به تیم",
@@ -98,7 +98,7 @@
       }
     },
     "SEARCH_PLACEHOLDER": "جستجوی اپراتور...",
-    "NO_RESULTS": "No agents found matching your search",
+    "NO_RESULTS": "کارشناسی با این جستجو پیدا نشد",
     "SEARCH": {
       "NO_RESULTS": "نتیجه‌ای یافت نشد."
     },

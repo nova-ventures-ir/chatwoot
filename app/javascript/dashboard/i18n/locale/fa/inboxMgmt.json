@@ -1,45 +1,45 @@
 {
   "INBOX_MGMT": {
     "HEADER": "صندوق‌های ورودی",
-    "DESCRIPTION": "A channel is the mode of communication your customer chooses to interact with you. An inbox is where you manage interactions for a specific channel. It can include communications from various sources such as email, live chat, and social media.",
-    "LEARN_MORE": "Learn more about inboxes",
-    "COUNT": "{n} inbox | {n} inboxes",
-    "SEARCH_PLACEHOLDER": "Search inbox name, channel, or identifier...",
-    "NO_RESULTS": "No inboxes found matching your search",
-    "RECONNECTION_REQUIRED": "Your inbox is disconnected. You won't receive new messages until you reauthorize it.",
-    "CLICK_TO_RECONNECT": "Click here to reconnect.",
+    "DESCRIPTION": "کانال راهی است که مشتری برای گفتگو با شما انتخاب می‌کند. صندوق جایی است که تعامل‌های همان کانال را مدیریت می‌کنید؛ مثل ایمیل، گفتگوی سایت و شبکه‌های اجتماعی.",
+    "LEARN_MORE": "درباره صندوق‌ها بیشتر بدانید",
+    "COUNT": "{n} صندوق | {n} صندوق",
+    "SEARCH_PLACEHOLDER": "جستجوی نام صندوق، کانال یا شناسه…",
+    "NO_RESULTS": "صندوقی با این جستجو پیدا نشد",
+    "RECONNECTION_REQUIRED": "صندوق قطع شده است. تا وقتی دوباره مجوز ندهید پیام تازه نمی‌رسد.",
+    "CLICK_TO_RECONNECT": "برای اتصال دوباره اینجا را بزنید.",
     "WHATSAPP_REGISTRATION_INCOMPLETE": "Your WhatsApp Business registration isn’t complete. Please check your display name status in Meta Business Manager before reconnecting.",
-    "COMPLETE_REGISTRATION": "Complete Registration",
+    "COMPLETE_REGISTRATION": "تکمیل ثبت‌نام",
     "LIST": {
       "404": "برای این حساب هیچ صندوق ورودی معرفی نشده است."
     },
     "CREATE_FLOW": {
       "CHANNEL": {
-        "TITLE": "کانال ورودی را انتخاب کنید",
-        "BODY": "جایی که قرار است امکان گفتگوی آنلاین در آنجا فراهم شود را انتخاب کنید"
+        "TITLE": "انتخاب کانال",
+        "BODY": "سرویسی را که می‌خواهید وصل کنید انتخاب کنید."
       },
       "INBOX": {
-        "TITLE": "ساخت صندوق ورودی",
-        "BODY": "به حساب کاربری وارد شوید و صندوق ورودی بسازید."
+        "TITLE": "ساخت صندوق",
+        "BODY": "حساب را تأیید کنید و صندوق بسازید."
       },
       "AGENT": {
-        "TITLE": "معرفی ایجنت",
-        "BODY": "ایجنت ها را به صندوق ورودی ساخته شده تخصیص می‌دهد."
+        "TITLE": "افزودن کارشناس",
+        "BODY": "کارشناس‌ها را به صندوق اضافه کنید."
       },
       "FINISH": {
-        "TITLE": "Voilà!",
-        "BODY": "دیگه می‌تونی بترکونی"
+        "TITLE": "تمام شد",
+        "BODY": "همه‌چیز آماده است."
       }
     },
     "ADD": {
       "CHANNEL_NAME": {
-        "LABEL": "عنوان صندوق ورودی",
-        "PLACEHOLDER": "نام صندوق ورودی خود را وارد کنید (به عنوان مثال: Acme Inc)",
-        "ERROR": "لطفاً یک نام صندوق ورودی معتبر وارد کنید"
+        "LABEL": "نام صندوق",
+        "PLACEHOLDER": "نام صندوق را بنویسید",
+        "ERROR": "یک نام معتبر برای صندوق بنویسید"
       },
       "WEBSITE_NAME": {
-        "LABEL": "عنوان سایت",
-        "PLACEHOLDER": "عنوان سایت خود را وارد کنید (به عنوان مثال: Acme Inc)"
+        "LABEL": "نام وب‌سایت",
+        "PLACEHOLDER": "نام وب‌سایت را بنویسید"
       },
       "FB": {
         "HELP": "پانویس: با وارد شدن ما فقط به پیام‌های صفحه دسترسی پیدا می‌کنیم. پیام‌های خصوصی شما را هرگز نخواهیم دید",
@@ -82,8 +82,8 @@
       },
       "WEBSITE_CHANNEL": {
         "TITLE": "کانال وب‌سایت",
-        "DESC": "یک کانال به وب سایت خود بسازید تا مشتریان بتوانند از طریق ویجت سایت با شما گفتگو کنند.",
-        "LOADING_MESSAGE": "در حال ساخت کانال پشتیبانی آنلاین سایت",
+        "DESC": "برای وب‌سایت یک کانال بسازید و از ابزار گفتگو به مشتری‌ها جواب دهید.",
+        "LOADING_MESSAGE": "در حال ساخت کانال پشتیبانی وب‌سایت",
         "CHANNEL_AVATAR": {
           "LABEL": "آواتار کانال"
         },
@@ -243,7 +243,7 @@
         }
       },
       "WHATSAPP": {
-        "TITLE": "کانال واتس اپ",
+        "TITLE": "کانال واتساپ",
         "DESC": "شروع به پشتیبانی از مشتریان از طریق واتس اپ.",
         "PROVIDERS": {
           "LABEL": "ارائه دهنده API",

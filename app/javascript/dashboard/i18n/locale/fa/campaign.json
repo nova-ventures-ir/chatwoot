@@ -1,100 +1,100 @@
 {
   "CAMPAIGN": {
     "LIVE_CHAT": {
-      "HEADER_TITLE": "Live chat campaigns",
-      "NEW_CAMPAIGN": "Create campaign",
+      "HEADER_TITLE": "کمپین‌های گفتگوی زنده",
+      "NEW_CAMPAIGN": "ساخت کمپین",
       "CARD": {
         "STATUS": {
-          "ENABLED": "فعال شد",
-          "DISABLED": "غیرفعال شد"
+          "ENABLED": "فعال",
+          "DISABLED": "غیرفعال"
         },
         "CAMPAIGN_DETAILS": {
-          "SENT_BY": "ارسال شده توسط",
+          "SENT_BY": "فرستاده توسط",
           "BOT": "ربات",
           "FROM": "از",
           "URL": "URL:"
         }
       },
       "EMPTY_STATE": {
-        "TITLE": "No live chat campaigns are available",
-        "SUBTITLE": "Connect with your customers using proactive messages.  Click 'Create campaign' to get started."
+        "TITLE": "کمپین گفتگوی زنده‌ای نیست",
+        "SUBTITLE": "با پیام‌های پیش‌دستانه با مشتری‌ها در تماس باشید. برای شروع «ساخت کمپین» را بزنید."
       },
       "CREATE": {
-        "TITLE": "Create a live chat campaign",
+        "TITLE": "ساخت کمپین گفتگوی زنده",
         "CANCEL_BUTTON_TEXT": "انصراف",
-        "CREATE_BUTTON_TEXT": "ايجاد كردن",
+        "CREATE_BUTTON_TEXT": "ساخت",
         "FORM": {
           "TITLE": {
             "LABEL": "عنوان",
-            "PLACEHOLDER": "لطفا عنوان کمپین را وارد کنید",
-            "ERROR": "عنوان الزامی است"
+            "PLACEHOLDER": "عنوان کمپین را بنویسید",
+            "ERROR": "عنوان لازم است"
           },
           "MESSAGE": {
             "LABEL": "پیام",
-            "PLACEHOLDER": "لطفاً پیام کمپین را وارد کنید",
-            "ERROR": "پیام الزامی است"
+            "PLACEHOLDER": "پیام کمپین را بنویسید",
+            "ERROR": "پیام لازم است"
           },
           "INBOX": {
-            "LABEL": "انتخاب صندوق ورودی",
-            "PLACEHOLDER": "انتخاب صندوق ورودی",
-            "ERROR": "صندوق ورودی مورد نیاز است"
+            "LABEL": "انتخاب صندوق",
+            "PLACEHOLDER": "صندوق را انتخاب کنید",
+            "ERROR": "صندوق لازم است"
           },
           "SENT_BY": {
-            "LABEL": "ارسال شده توسط",
-            "PLACEHOLDER": "Please select sender",
-            "ERROR": "ارسال کننده الزامی است"
+            "LABEL": "فرستنده",
+            "PLACEHOLDER": "فرستنده را انتخاب کنید",
+            "ERROR": "فرستنده لازم است"
           },
           "END_POINT": {
-            "LABEL": "URL",
-            "PLACEHOLDER": "لطفاً URL را وارد کنید",
-            "ERROR": "لطفا آدرس URL صحیحی وارد کنید"
+            "LABEL": "نشانی",
+            "PLACEHOLDER": "نشانی را بنویسید",
+            "ERROR": "یک نشانی معتبر بنویسید"
           },
           "TIME_ON_PAGE": {
-            "LABEL": "زمان در صفحه (ثانیه ها)",
-            "PLACEHOLDER": "لطفاً زمان را وارد کنید",
-            "ERROR": "زمان حضور در صفحه لازم است"
+            "LABEL": "زمان ماندن در صفحه (ثانیه)",
+            "PLACEHOLDER": "زمان را بنویسید",
+            "ERROR": "زمان ماندن در صفحه لازم است"
           },
           "OTHER_PREFERENCES": {
-            "TITLE": "Other preferences",
+            "TITLE": "ترجیح‌های دیگر",
             "ENABLED": "فعال کردن کمپین",
-            "TRIGGER_ONLY_BUSINESS_HOURS": "تنها در طول ساعات کاری"
+            "TRIGGER_ONLY_BUSINESS_HOURS": "فقط در ساعت کاری"
           },
           "BUTTONS": {
-            "CREATE": "ايجاد كردن",
+            "CREATE": "ساخت",
             "CANCEL": "انصراف"
           },
           "API": {
-            "SUCCESS_MESSAGE": "Live chat campaign created successfully",
-            "ERROR_MESSAGE": "یک خطای وجود دارد. لطفا دوباره تلاش کنید."
+            "SUCCESS_MESSAGE": "کمپین گفتگوی زنده ساخته شد",
+            "ERROR_MESSAGE": "خطایی رخ داد. دوباره تلاش کنید."
           }
         }
       },
       "EDIT": {
-        "TITLE": "Edit live chat campaign",
+        "TITLE": "ویرایش کمپین گفتگوی زنده",
         "FORM": {
           "API": {
-            "SUCCESS_MESSAGE": "Live chat campaign updated successfully",
-            "ERROR_MESSAGE": "یک خطای وجود دارد. لطفا دوباره تلاش کنید."
+            "SUCCESS_MESSAGE": "کمپین گفتگوی زنده به‌روز شد",
+            "ERROR_MESSAGE": "خطایی رخ داد. دوباره تلاش کنید."
           }
         }
       }
     },
     "SMS": {
-      "HEADER_TITLE": "SMS campaigns",
-      "NEW_CAMPAIGN": "Create campaign",
+      "HEADER_TITLE": "کمپین‌های پیامک",
+      "NEW_CAMPAIGN": "ساخت کمپین",
       "EMPTY_STATE": {
-        "TITLE": "No SMS campaigns are available",
-        "SUBTITLE": "Launch an SMS campaign to reach your customers directly. Send offers or make announcements with ease. Click 'Create campaign' to get started."
+        "TITLE": "کمپین پیامکی نیست",
+        "SUBTITLE": "با پیامک به مشتری‌ها برسید. برای شروع «ساخت کمپین» را بزنید."
       },
       "CARD": {
         "STATUS": {
-          "PROCESSING": "Processing",
+          "PROCESSING": "در حال پردازش",
           "COMPLETED": "تکمیل شد",
-          "SCHEDULED": "Scheduled"
+          "SCHEDULED": "زمان‌بندی‌شده"
         },
         "CAMPAIGN_DETAILS": {
-          "SENT_FROM": "Sent from",
-          "ON": "on"
+          "SENT_FROM": "ارسال از",
+          "ON": "در"
         }
       },
       "CREATE": {
@@ -139,26 +139,26 @@
       }
     },
     "WHATSAPP": {
-      "HEADER_TITLE": "WhatsApp campaigns",
-      "NEW_CAMPAIGN": "Create campaign",
+      "HEADER_TITLE": "کمپین‌های واتساپ",
+      "NEW_CAMPAIGN": "ساخت کمپین",
       "EMPTY_STATE": {
-        "TITLE": "No WhatsApp campaigns are available",
-        "SUBTITLE": "Launch a WhatsApp campaign to reach your customers directly. Send offers or make announcements with ease. Click 'Create campaign' to get started."
+        "TITLE": "کمپین واتساپی موجود نیست",
+        "SUBTITLE": "با کمپین واتساپ مستقیم به مشتری‌ها برسید. پیشنهاد یا اطلاعیه بفرستید. برای شروع «ساخت کمپین» را بزنید."
       },
       "CARD": {
         "ANALYTICS": "View analytics",
         "STATUS": {
-          "PROCESSING": "Processing",
+          "PROCESSING": "در حال پردازش",
           "COMPLETED": "تکمیل شد",
-          "SCHEDULED": "Scheduled"
+          "SCHEDULED": "زمان‌بندی‌شده"
         },
         "CAMPAIGN_DETAILS": {
-          "SENT_FROM": "Sent from",
-          "ON": "on"
+          "SENT_FROM": "ارسال از",
+          "ON": "در"
         }
       },
       "FORM": {
-        "CREATE_TITLE": "Create campaign",
+        "CREATE_TITLE": "ساخت کمپین",
         "LIVE_TEST": "Live test",
         "LIVE_TEST_TOOLTIP": "Live test will be available soon",
         "SCHEDULE": "Schedule campaign",
@@ -340,12 +340,12 @@
       }
     },
     "HISTORY": {
-      "LABEL": "Campaign",
-      "LOAD_MORE": "Load earlier campaigns"
+      "LABEL": "کمپین",
+      "LOAD_MORE": "کمپین‌های قبلی"
     },
     "CONFIRM_DELETE": {
-      "TITLE": "مطمئن هستید که حذف شود?",
-      "DESCRIPTION": "The delete action is permanent and cannot be reversed.",
+      "TITLE": "حذف شود؟",
+      "DESCRIPTION": "حذف دائمی است و برنمی‌گردد.",
       "WHATSAPP_DESCRIPTION": "Deleting this campaign will also remove its saved message history and delivery details. Messages already sent on WhatsApp will remain. This cannot be undone.",
       "CONFIRM": "حذف",
       "API": {

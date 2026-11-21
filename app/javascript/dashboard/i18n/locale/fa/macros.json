@@ -1,14 +1,14 @@
 {
   "MACROS": {
     "HEADER": "ماکروها",
-    "DESCRIPTION": "A macro is a set of saved actions that help customer service agents easily complete tasks. The agents can define a set of actions like tagging a conversation with a label, sending an email transcript, updating a custom attribute, etc., and they can run these actions in a single click.",
-    "LEARN_MORE": "Learn more about macros",
-    "COUNT": "{n} macro | {n} macros",
+    "DESCRIPTION": "ماکرو مجموعه‌ای از کارهاست که کارشناس با یک کلیک انجام می‌دهد؛ مثل برچسب‌زدن، ارسال متن گفتگو یا به‌روزرسانی ویژگی.",
+    "LEARN_MORE": "درباره ماکروها بیشتر بدانید",
+    "COUNT": "{n} ماکرو | {n} ماکرو",
     "HEADER_BTN_TXT": "افزودن ماکرو جدید",
     "HEADER_BTN_TXT_SAVE": "ذخیره ماکرو",
     "LOADING": "در حال گرفتن ماکروها",
-    "SEARCH_PLACEHOLDER": "Search macros...",
-    "NO_RESULTS": "No macros found matching your search",
+    "SEARCH_PLACEHOLDER": "جستجوی ماکرو…",
+    "NO_RESULTS": "ماکرویی با این جستجو پیدا نشد",
     "ERROR": "مشکلی پیش آمد. لطفا دوباره تلاش کنید",
     "ORDER_INFO": "ماکروها به ترتیبی که اقدامات خود را اضافه می کنید اجرا می شوند. می توانید با کشیدن آنها توسط دسته کنار هر گره آنها را دوباره مرتب کنید.",
     "ADD": {
@@ -50,7 +50,7 @@
       }
     },
     "VIEW": {
-      "TOOLTIP": "View macro"
+      "TOOLTIP": "نمایش ماکرو"
     },
     "EDIT": {
       "TOOLTIP": "ویرایش ماکرو",
@@ -70,8 +70,8 @@
         "GLOBAL": {
           "LABEL": "عمومی",
           "DESCRIPTION": "این ماکرو به صورت عمومی برای همه نمایندگان این حساب در دسترس است.",
-          "CREATE_DISABLED_DESCRIPTION": "Only administrators can create public macros.",
-          "EDIT_DISABLED_DESCRIPTION": "Only administrators can edit public macros."
+          "CREATE_DISABLED_DESCRIPTION": "فقط مدیرها می‌توانند ماکروی عمومی بسازند.",
+          "EDIT_DISABLED_DESCRIPTION": "فقط مدیرها می‌توانند ماکروی عمومی را ویرایش کنند."
         },
         "PERSONAL": {
           "LABEL": "خصوصی",
@@ -83,34 +83,34 @@
       "BUTTON_TOOLTIP": "اجرا کردن",
       "PREVIEW": "پیش‌نمایش ماکرو",
       "EXECUTED_SUCCESSFULLY": "ماکرو با موفقیت اجرا شد",
-      "EXECUTED_WITHOUT_RESOLVING": "Macro executed. The conversation was not resolved because required attributes are missing."
+      "EXECUTED_WITHOUT_RESOLVING": "ماکرو اجرا شد. گفتگو حل نشد چون ویژگی‌های لازم کامل نیست."
     },
     "ERRORS": {
-      "ATTRIBUTE_KEY_REQUIRED": "Attribute key is required",
-      "FILTER_OPERATOR_REQUIRED": "Filter operator is required",
+      "ATTRIBUTE_KEY_REQUIRED": "کلید ویژگی لازم است",
+      "FILTER_OPERATOR_REQUIRED": "عملگر فیلتر لازم است",
       "VALUE_REQUIRED": "مقدار الزامی است",
-      "VALUE_MUST_BE_BETWEEN_1_AND_998": "Value must be between 1 and 998",
-      "ACTION_PARAMETERS_REQUIRED": "Action parameters are required",
-      "ATLEAST_ONE_CONDITION_REQUIRED": "At least one condition is required",
-      "ATLEAST_ONE_ACTION_REQUIRED": "At least one action is required"
+      "VALUE_MUST_BE_BETWEEN_1_AND_998": "مقدار باید بین ۱ و ۹۹۸ باشد",
+      "ACTION_PARAMETERS_REQUIRED": "پارامترهای عمل لازم است",
+      "ATLEAST_ONE_CONDITION_REQUIRED": "حداقل یک شرط لازم است",
+      "ATLEAST_ONE_ACTION_REQUIRED": "حداقل یک عمل لازم است"
     },
     "ACTIONS": {
-      "ASSIGN_TEAM": "Assign a Team",
-      "ASSIGN_AGENT": "Assign an Agent",
-      "ADD_LABEL": "Add a Label",
-      "REMOVE_LABEL": "Remove a Label",
-      "REMOVE_ASSIGNED_AGENT": "Remove Assigned Agent",
-      "REMOVE_ASSIGNED_TEAM": "Remove Assigned Team",
-      "SEND_EMAIL_TRANSCRIPT": "Send an Email Transcript",
+      "ASSIGN_TEAM": "واگذاری به تیم",
+      "ASSIGN_AGENT": "واگذاری به کارشناس",
+      "ADD_LABEL": "افزودن برچسب",
+      "REMOVE_LABEL": "حذف برچسب",
+      "REMOVE_ASSIGNED_AGENT": "برداشتن کارشناس",
+      "REMOVE_ASSIGNED_TEAM": "برداشتن تیم",
+      "SEND_EMAIL_TRANSCRIPT": "ارسال متن گفتگو با ایمیل",
       "MUTE_CONVERSATION": "بی‌صدا کردن گفتگو",
       "SNOOZE_CONVERSATION": "به تعویق انداختن مکالمه",
       "RESOLVE_CONVERSATION": "حل مکالمه",
-      "CHANGE_STATUS": "Change Status",
-      "SEND_ATTACHMENT": "Send Attachment",
-      "SEND_MESSAGE": "Send a Message",
+      "CHANGE_STATUS": "تغییر وضعیت",
+      "SEND_ATTACHMENT": "ارسال پیوست",
+      "SEND_MESSAGE": "ارسال پیام",
       "CHANGE_PRIORITY": "تغییر اولویت",
-      "ADD_PRIVATE_NOTE": "Add a Private Note",
-      "SEND_WEBHOOK_EVENT": "Send Webhook Event"
+      "ADD_PRIVATE_NOTE": "افزودن یادداشت خصوصی",
+      "SEND_WEBHOOK_EVENT": "ارسال رویداد وب‌هوک"
     },
     "PRIORITY_TYPES": {
       "NONE": "هیچکدام",

@@ -8,91 +8,91 @@
         "DOMAIN": "دامنه",
         "CREATED_AT": "ایجاد شده در",
         "LAST_ACTIVITY_AT": "آخرین فعالیت",
-        "CONTACTS_COUNT": "Contacts count"
+        "CONTACTS_COUNT": "تعداد مخاطبان"
       }
     },
     "ORDER": {
       "LABEL": "ترتیب",
       "OPTIONS": {
-        "ASCENDING": "Ascending",
-        "DESCENDING": "Descending"
+        "ASCENDING": "صعودی",
+        "DESCENDING": "نزولی"
       }
     },
     "SEARCH_PLACEHOLDER": "جستجوی شرکت ها...",
     "LOADING": "در حال بارگزاری شرکت ها...",
-    "UNNAMED": "Unnamed Company",
+    "UNNAMED": "شرکت بدون نام",
     "CONTACTS_COUNT": "{n} تماس | {n} تماس ها",
     "ACTIONS": {
-      "CREATE": "Add company"
+      "CREATE": "افزودن شرکت"
     },
     "SELECTOR": {
-      "PLACEHOLDER": "Select company",
-      "CREATE_OPTION": "Add \"{name}\""
+      "PLACEHOLDER": "انتخاب شرکت",
+      "CREATE_OPTION": "افزودن «{name}»"
     },
     "CREATE": {
-      "TITLE": "Add company details",
+      "TITLE": "جزئیات شرکت",
       "ACTIONS": {
-        "SAVE": "Add company"
+        "SAVE": "افزودن شرکت"
       },
       "MESSAGES": {
-        "SUCCESS": "Company created.",
-        "ERROR": "Could not create the company."
+        "SUCCESS": "شرکت ساخته شد.",
+        "ERROR": "شرکت ساخته نشد."
       }
     },
     "DETAIL": {
       "EMPTY_STATE": {
-        "TITLE": "Company not found",
-        "SUBTITLE": "This company may have been removed or is no longer available in this account."
+        "TITLE": "شرکت پیدا نشد",
+        "SUBTITLE": "این شرکت حذف شده یا دیگر در این حساب نیست."
       },
       "HEADER": {
         "EDIT": "ویرایش",
-        "MORE": "Show more",
+        "MORE": "نمایش بیشتر",
         "LESS": "نمایش کمتر",
-        "OPEN_COUNT": "{count} open | {count} open",
-        "REFRESH_WITH_TIME": "Refresh profile (updated {time})"
+        "OPEN_COUNT": "{count} باز | {count} باز",
+        "REFRESH_WITH_TIME": "تازه‌سازی پروفایل (به‌روزشده {time})"
       },
       "FACTS": {
-        "INDUSTRY": "Industry",
-        "SIZE": "Employees",
-        "LOCATION": "Based in",
-        "ADDED": "Added",
-        "UNKNOWN": "Unknown",
+        "INDUSTRY": "صنعت",
+        "SIZE": "کارمندان",
+        "LOCATION": "مستقر در",
+        "ADDED": "افزوده‌شده",
+        "UNKNOWN": "نامشخص",
         "YES": "بله",
         "NO": "خیر"
       },
       "PEOPLE": {
         "ADD": "افزودن",
-        "SEARCH": "Search people",
-        "EMPTY": "No one from this company yet.",
-        "NO_MATCHES": "No people match your search.",
-        "DIALOG_TITLE": "Add people to {name}"
+        "SEARCH": "جستجوی افراد",
+        "EMPTY": "هنوز کسی از این شرکت نیست.",
+        "NO_MATCHES": "کسی با این جستجو پیدا نشد.",
+        "DIALOG_TITLE": "افزودن افراد به {name}"
       },
       "TABS": {
         "CONVERSATIONS": "گفتگوها",
         "NOTES": "یادداشت‌ها",
-        "PEOPLE": "People"
+        "PEOPLE": "افراد"
       },
       "ACTIVITY": {
         "TODAY": "امروز",
         "YESTERDAY": "دیروز",
         "SYSTEM_AUTHOR": "سیستم",
-        "EMPTY_CONVERSATIONS": "No conversations yet. They'll show up here when this company's people get in touch.",
-        "EMPTY_NOTES": "No notes yet. Notes added to this company's people show up here.",
-        "LOAD_MORE": "Load more",
-        "SEARCH_NOTES": "Search notes",
-        "NO_MATCHING_NOTES": "No notes match your search.",
-        "NO_MATCHING_CONVERSATIONS": "No conversations match these filters."
+        "EMPTY_CONVERSATIONS": "هنوز گفتگویی نیست. وقتی افراد این شرکت پیام بدهند اینجا دیده می‌شود.",
+        "EMPTY_NOTES": "هنوز یادداشتی نیست. یادداشت افراد این شرکت اینجا دیده می‌شود.",
+        "LOAD_MORE": "بارگذاری بیشتر",
+        "SEARCH_NOTES": "جستجوی یادداشت",
+        "NO_MATCHING_NOTES": "یادداشتی با این جستجو نیست.",
+        "NO_MATCHING_CONVERSATIONS": "گفتگویی با این فیلترها نیست."
       },
       "EDIT": {
-        "TITLE": "Edit company",
-        "SAVE": "Save changes",
+        "TITLE": "ویرایش شرکت",
+        "SAVE": "ذخیره تغییرات",
         "DESCRIPTION": "توضیحات",
-        "DETAILS": "Details",
+        "DETAILS": "جزئیات",
         "CITY": "شهر",
         "COUNTRY": "کشور",
         "PHONE": "موبایل",
         "SOCIAL": {
-          "TITLE": "Social profiles",
+          "TITLE": "شبکه‌های اجتماعی",
           "LINKEDIN": "لینکدین",
           "X": "X",
           "FACEBOOK": "فیس‌بوک",
@@ -102,72 +102,72 @@
         },
         "PLACEHOLDERS": {
           "DOMAIN": "acme.com",
-          "INDUSTRY": "Software",
-          "EMPLOYEES": "51 to 200",
-          "USERNAME": "username"
+          "INDUSTRY": "نرم‌افزار",
+          "EMPLOYEES": "۵۱ تا ۲۰۰",
+          "USERNAME": "نام‌کاربری"
         }
       },
       "ATTRIBUTES": {
         "SEARCH_PLACEHOLDER": "جستجو ویژگی ها...",
-        "EMPTY_STATE": "There are no company custom attributes configured yet.",
-        "NO_ATTRIBUTES": "No matching attributes found.",
-        "UNUSED_ATTRIBUTES": "{count} unused attribute | {count} unused attributes",
+        "EMPTY_STATE": "هنوز ویژگی سفارشی برای شرکت تنظیم نشده.",
+        "NO_ATTRIBUTES": "ویژگی منطبقی پیدا نشد.",
+        "UNUSED_ATTRIBUTES": "{count} ویژگی استفاده‌نشده | {count} ویژگی استفاده‌نشده",
         "MESSAGES": {
-          "UPDATE_SUCCESS": "Company attribute updated.",
-          "UPDATE_ERROR": "Could not update company attribute.",
-          "DELETE_SUCCESS": "Company attribute removed.",
-          "DELETE_ERROR": "Could not remove company attribute."
+          "UPDATE_SUCCESS": "ویژگی شرکت به‌روز شد.",
+          "UPDATE_ERROR": "ویژگی شرکت به‌روز نشد.",
+          "DELETE_SUCCESS": "ویژگی شرکت حذف شد.",
+          "DELETE_ERROR": "ویژگی شرکت حذف نشد."
         },
         "TITLE": "ویژگی‌های سفارشی"
       },
       "CONTACTS": {
         "LOADING": "در حال بارگذاری مخاطبین...",
-        "UNNAMED_CONTACT": "Unnamed contact",
+        "UNNAMED_CONTACT": "مخاطب بدون نام",
         "ACTIONS": {
-          "ADD": "Add contact",
-          "REMOVE": "Remove contact"
+          "ADD": "افزودن مخاطب",
+          "REMOVE": "حذف مخاطب"
         },
         "DIALOGS": {
           "ADD": {
-            "DESCRIPTION": "Search for an existing contact and link it to this company.",
+            "DESCRIPTION": "مخاطب موجود را جستجو کنید و به این شرکت وصل کنید.",
             "SEARCH_PLACEHOLDER": "جستجوی مخاطبین...",
-            "INITIAL": "Start typing to search contacts.",
+            "INITIAL": "برای جستجوی مخاطب تایپ کنید.",
             "EMPTY": "هیچ مخاطبی پیدا نشد.",
-            "CONFIRM_TITLE": "Link contact",
-            "CONFIRM_DESCRIPTION": "Confirm the company and contact before linking them.",
+            "CONFIRM_TITLE": "اتصال مخاطب",
+            "CONFIRM_DESCRIPTION": "پیش از اتصال، شرکت و مخاطب را تأیید کنید.",
             "COMPANY_LABEL": "شرکت",
             "CONTACT_LABEL": "مخاطب",
-            "CURRENT_COMPANY": "Currently linked to {companyName}",
-            "ADD": "Link contact",
+            "CURRENT_COMPANY": "الان به {companyName} وصل است",
+            "ADD": "اتصال مخاطب",
             "CANCEL": "انصراف"
           }
         },
         "MESSAGES": {
-          "ADD_SUCCESS": "Contact linked to company.",
-          "ADD_ERROR": "Could not link contact to company.",
-          "REASSIGN_SUCCESS": "Contact reassigned to company.",
-          "REASSIGN_ERROR": "Could not reassign contact to company.",
-          "REMOVE_SUCCESS": "Contact removed from company.",
-          "REMOVE_ERROR": "Could not remove contact from company."
+          "ADD_SUCCESS": "مخاطب به شرکت وصل شد.",
+          "ADD_ERROR": "مخاطب به شرکت وصل نشد.",
+          "REASSIGN_SUCCESS": "مخاطب به شرکت دیگری منتقل شد.",
+          "REASSIGN_ERROR": "انتقال مخاطب انجام نشد.",
+          "REMOVE_SUCCESS": "مخاطب از شرکت جدا شد.",
+          "REMOVE_ERROR": "جدا کردن مخاطب انجام نشد."
         }
       },
       "AVATAR": {
-        "UPDATING": "Updating company avatar...",
-        "UPLOAD_SUCCESS": "Company avatar updated.",
-        "UPLOAD_ERROR": "Could not update the company avatar.",
-        "DELETE_SUCCESS": "Company avatar removed.",
-        "DELETE_ERROR": "Could not remove the company avatar."
+        "UPDATING": "در حال به‌روزرسانی تصویر شرکت…",
+        "UPLOAD_SUCCESS": "تصویر شرکت به‌روز شد.",
+        "UPLOAD_ERROR": "تصویر شرکت به‌روز نشد.",
+        "DELETE_SUCCESS": "تصویر شرکت حذف شد.",
+        "DELETE_ERROR": "تصویر شرکت حذف نشد."
       },
       "PROFILE": {
-        "DESCRIPTION_PLACEHOLDER": "Add a short description for this company",
+        "DESCRIPTION_PLACEHOLDER": "توضیح کوتاهی برای این شرکت بنویسید",
         "ACTIONS": {
-          "REFRESH": "Refresh profile"
+          "REFRESH": "تازه‌سازی پروفایل"
         },
         "MESSAGES": {
-          "UPDATE_SUCCESS": "Company updated.",
-          "UPDATE_ERROR": "Could not update the company.",
-          "REFRESH_SUCCESS": "Company profile refreshed.",
-          "REFRESH_ERROR": "Could not refresh the company profile."
+          "UPDATE_SUCCESS": "شرکت به‌روز شد.",
+          "UPDATE_ERROR": "شرکت به‌روز نشد.",
+          "REFRESH_SUCCESS": "پروفایل شرکت تازه‌سازی شد.",
+          "REFRESH_ERROR": "پروفایل شرکت تازه‌سازی نشد."
         },
         "FIELDS": {
           "NAME": "نام",
@@ -175,44 +175,44 @@
         }
       },
       "DELETE": {
-        "BUTTON": "Delete company",
-        "TITLE": "Delete company?",
-        "DESCRIPTION": "This will remove the company and unlink all associated contacts. Contacts themselves will be preserved.",
-        "DESCRIPTION_WITH_NAME": "This will remove {companyName} and unlink all associated contacts. Contacts themselves will be preserved.",
-        "CONFIRM": "Delete company",
+        "BUTTON": "حذف شرکت",
+        "TITLE": "شرکت حذف شود؟",
+        "DESCRIPTION": "شرکت حذف می‌شود و اتصال مخاطبان قطع می‌شود. خود مخاطبان می‌مانند.",
+        "DESCRIPTION_WITH_NAME": "{companyName} حذف می‌شود و اتصال مخاطبان قطع می‌شود. خود مخاطبان می‌مانند.",
+        "CONFIRM": "حذف شرکت",
         "MESSAGES": {
-          "SUCCESS": "Company deleted.",
-          "ERROR": "Could not delete the company."
+          "SUCCESS": "شرکت حذف شد.",
+          "ERROR": "شرکت حذف نشد."
         }
       },
       "CONVERSATION_FILTERS": {
         "BUTTON": "فیلتر",
-        "BUTTON_WITH_COUNT": "Filter ({count})",
-        "ANY": "Any"
+        "BUTTON_WITH_COUNT": "فیلتر ({count})",
+        "ANY": "همه"
       },
       "ENRICHMENT_UPGRADE": {
-        "TITLE": "Enrich company profiles on the Business plan",
-        "DESCRIPTION": "Automatically fill in a company's description, industry, size, location and social profiles from its domain. Available on the Business and Enterprise plans.",
-        "UPGRADE": "See plans"
+        "TITLE": "تکمیل پروفایل شرکت در طرح تجاری",
+        "DESCRIPTION": "توضیح، صنعت، اندازه، مکان و شبکه‌های اجتماعی شرکت از روی دامنه پر می‌شود. در طرح‌های تجاری و سازمانی است.",
+        "UPGRADE": "دیدن طرح‌ها"
       }
     },
     "EMPTY_STATE": {
-      "TITLE": "No companies found"
+      "TITLE": "شرکتی پیدا نشد"
     },
     "CARD": {
-      "EMPLOYEES": "{count} employees"
+      "EMPLOYEES": "{count} کارمند"
     },
     "PAYWALL": {
-      "TITLE": "Upgrade to use Companies",
-      "AVAILABLE_ON": "Companies is not available on the free plan.",
-      "UPGRADE_PROMPT": "Upgrade your plan to group contacts by company, see every conversation with an account and keep company details in one place.",
+      "TITLE": "برای شرکت‌ها طرح را ارتقا دهید",
+      "AVAILABLE_ON": "شرکت‌ها در طرح رایگان نیست.",
+      "UPGRADE_PROMPT": "طرح را ارتقا دهید تا مخاطبان را بر اساس شرکت ببینید و جزئیات را یکجا داشته باشید.",
       "UPGRADE_NOW": "حالا ارتقا دهید",
-      "CANCEL_ANYTIME": "You can change or cancel your plan anytime"
+      "CANCEL_ANYTIME": "هر زمان می‌توانید طرح را عوض یا لغو کنید"
     }
   },
   "COMPANIES_LAYOUT": {
     "PAGINATION_FOOTER": {
-      "SHOWING": "Showing {startItem} – {endItem} of {totalItems} company | Showing {startItem} – {endItem} of {totalItems} companies"
+      "SHOWING": "نمایش {startItem} – {endItem} از {totalItems} شرکت | نمایش {startItem} – {endItem} از {totalItems} شرکت"
     }
   }
 }

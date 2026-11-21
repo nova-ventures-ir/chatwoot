@@ -15,23 +15,23 @@
       "SUCCESS": "تنظیمات با موفقیت اعمال شد"
     },
     "ACCOUNT_DELETE_SECTION": {
-      "TITLE": "Delete your Account",
-      "NOTE": "Once you delete your account, all your data will be deleted.",
-      "BUTTON_TEXT": "Delete Your Account",
+      "TITLE": "حذف حساب",
+      "NOTE": "با حذف حساب، همه داده‌ها پاک می‌شود.",
+      "BUTTON_TEXT": "حذف حساب",
       "CONFIRM": {
-        "TITLE": "Delete Account",
-        "MESSAGE": "Deleting your Account is irreversible. Enter your account name below to confirm you want to permanently delete it.",
+        "TITLE": "حذف حساب",
+        "MESSAGE": "حذف حساب برگشت‌پذیر نیست. برای تأیید، نام حساب را بنویسید.",
         "BUTTON_TEXT": "حذف",
         "DISMISS": "انصراف",
         "PLACE_HOLDER": "برای تایید لطفا {accountName} را تایپ کنید"
       },
-      "SUCCESS": "Account marked for deletion",
-      "FAILURE": "Could not delete account, try again!",
+      "SUCCESS": "حساب برای حذف علامت خورد",
+      "FAILURE": "حساب حذف نشد. دوباره تلاش کنید.",
       "SCHEDULED_DELETION": {
-        "TITLE": "Account Scheduled for Deletion",
-        "MESSAGE_MANUAL": "This account is scheduled for deletion on {deletionDate}. This was requested by an administrator. You can cancel the deletion before this date.",
-        "MESSAGE_INACTIVITY": "This account is scheduled for deletion on {deletionDate} due to account inactivity. You can cancel the deletion before this date.",
-        "CLEAR_BUTTON": "Cancel Scheduled Deletion"
+        "TITLE": "حذف حساب زمان‌بندی شده",
+        "MESSAGE_MANUAL": "این حساب در {deletionDate} حذف می‌شود. تا آن زمان می‌توانید لغو کنید.",
+        "MESSAGE_INACTIVITY": "این حساب به‌خاطر نبود فعالیت در {deletionDate} حذف می‌شود. تا آن زمان می‌توانید لغو کنید.",
+        "CLEAR_BUTTON": "لغو حذف زمان‌بندی‌شده"
       }
     },
     "FORM": {
@@ -45,61 +45,61 @@
         "NOTE": "اگر شما در حال ساخت یک یکپارچه‌سازی مبتنی بر API هستید، این شناسه مورد نیاز است"
       },
       "TRANSLATION": {
-        "TITLE": "Translation",
-        "NOTE": "Speak every customer's language, whatever languages your team knows.",
+        "TITLE": "ترجمه",
+        "NOTE": "به زبان مشتری حرف بزنید، هر زبانی که تیم بداند.",
         "CAPTAIN": {
-          "TITLE": "Captain",
+          "TITLE": "کاپیتان",
           "NOTE": "AI translations that sound natural and keep your tone."
         },
         "GOOGLE": {
           "TITLE": "مترجم گوگل",
           "NOTE": "Quick, reliable translations from Google.",
-          "NOT_CONNECTED": "Not connected",
+          "NOT_CONNECTED": "متصل نیست",
           "CONNECT": "اتصال",
-          "NOT_CONNECTED_HINT": "Google Translate isn't connected yet."
+          "NOT_CONNECTED_HINT": "ترجمه گوگل هنوز وصل نشده."
         },
         "UPGRADE": {
-          "NOTE": "Upgrade to a paid plan to translate conversations with Captain or Google Translate.",
+          "NOTE": "برای ترجمه گفتگوها به طرح پولی ارتقا دهید.",
           "BUTTON": "ارتقا"
         },
         "AUTO_TRANSLATE": {
-          "TITLE": "Auto-translate conversations",
-          "NOTE": "Read every message in your language. Customers get replies in theirs.",
-          "LOCKED": "Choose a service to turn this on.",
-          "NOT_AVAILABLE": "Auto-translate isn't enabled for this account yet."
+          "TITLE": "ترجمه خودکار گفتگوها",
+          "NOTE": "پیام‌ها را به زبان خودتان بخوانید و پاسخ را به زبان مشتری بفرستید.",
+          "LOCKED": "برای روشن کردن، یک سرویس انتخاب کنید.",
+          "NOT_AVAILABLE": "ترجمه خودکار برای این حساب هنوز روشن نیست."
         },
         "API": {
-          "SUCCESS": "Translation settings updated successfully",
-          "ERROR": "Failed to update translation settings"
+          "SUCCESS": "تنظیم ترجمه ذخیره شد",
+          "ERROR": "تنظیم ترجمه ذخیره نشد"
         }
       },
       "AUTO_RESOLVE": {
-        "TITLE": "Auto-resolve conversations",
-        "NOTE": "This configuration would allow you to automatically resolve the conversation after a certain period of inactivity.",
+        "TITLE": "حل خودکار گفتگو",
+        "NOTE": "بعد از مدتی بی‌فعالیتی، گفتگو خودکار حل می‌شود.",
         "DURATION": {
-          "LABEL": "Inactivity duration",
-          "HELP": "Time period of inactivity after which conversation is auto-resolved",
+          "LABEL": "مدت بی‌فعالیتی",
+          "HELP": "بعد از این مدت بی‌فعالیتی، گفتگو حل می‌شود",
           "PLACEHOLDER": "۳۰",
-          "ERROR": "Auto resolve duration should be between {minDuration} minutes and 999 days",
+          "ERROR": "مدت باید بین {minDuration} دقیقه و ۹۹۹ روز باشد",
           "API": {
-            "SUCCESS": "Auto resolve settings updated successfully",
-            "ERROR": "Failed to update auto resolve settings"
+            "SUCCESS": "تنظیم حل خودکار ذخیره شد",
+            "ERROR": "تنظیم حل خودکار ذخیره نشد"
           }
         },
         "MESSAGE": {
-          "LABEL": "Custom auto-resolution message",
-          "PLACEHOLDER": "Conversation was marked resolved by system due to 15 days of inactivity",
-          "HELP": "Message sent to the customer after conversation is auto-resolved"
+          "LABEL": "پیام حل خودکار",
+          "PLACEHOLDER": "به‌خاطر ۱۵ روز بی‌فعالیتی، گفتگو توسط سیستم حل شد",
+          "HELP": "پیامی که بعد از حل خودکار برای مشتری فرستاده می‌شود"
         },
         "PREFERENCES": "تنظیمات",
         "LABEL": {
-          "LABEL": "Add label after auto-resolution",
-          "PLACEHOLDER": "Select a label"
+          "LABEL": "برچسب بعد از حل خودکار",
+          "PLACEHOLDER": "یک برچسب انتخاب کنید"
         },
         "IGNORE_WAITING": {
-          "LABEL": "Skip conversations waiting for agent’s reply"
+          "LABEL": "رد کردن گفتگوهایی که منتظر پاسخ کارشناس‌اند"
         },
-        "UPDATE_BUTTON": "Save Changes"
+        "UPDATE_BUTTON": "ذخیره تغییرات"
       },
       "NAME": {
         "LABEL": "نام حساب‌کاربری",
@@ -122,23 +122,23 @@
         "ERROR": ""
       },
       "AUTO_RESOLVE_IGNORE_WAITING": {
-        "LABEL": "Exclude unattended conversations",
-        "HELP": "When enabled, the system will skip resolving conversations that are still waiting for an agent's reply."
+        "LABEL": "مستثنی کردن گفتگوهای بی‌پاسخ",
+        "HELP": "گفتگوهایی که هنوز منتظر پاسخ کارشناس‌اند حل نمی‌شوند."
       },
       "AUDIO_TRANSCRIPTION": {
-        "TITLE": "Transcribe Audio Messages",
-        "NOTE": "Automatically transcribe audio messages in conversations. Generate a text transcript whenever an audio message is sent or received, and display it alongside the message.",
+        "TITLE": "پیاده‌سازی پیام صوتی",
+        "NOTE": "پیام‌های صوتی را خودکار به متن تبدیل کنید و کنار پیام نشان دهید.",
         "API": {
-          "SUCCESS": "Audio transcription setting updated successfully",
-          "ERROR": "Failed to update audio transcription setting"
+          "SUCCESS": "تنظیم پیاده‌سازی صدا ذخیره شد",
+          "ERROR": "تنظیم پیاده‌سازی صدا ذخیره نشد"
         }
       },
       "ENFORCE_MFA": {
-        "TITLE": "Enforce two-factor authentication",
-        "NOTE": "Require every member of this account to set up two-factor authentication. Members without it will be asked to set it up at their next password sign-in. Sign-ins through Google or SAML are exempt. API access tokens of members who have not set up two-factor authentication stop working for this account until they enrol.",
+        "TITLE": "اجبار احراز هویت دومرحله‌ای",
+        "NOTE": "همه اعضای حساب باید احراز هویت دومرحله‌ای داشته باشند. ورود با گوگل یا SAML مستثناست.",
         "API": {
-          "SUCCESS": "Two-factor authentication enforcement updated successfully",
-          "ERROR": "Failed to update two-factor authentication enforcement"
+          "SUCCESS": "اجبار احراز هویت دومرحله‌ای ذخیره شد",
+          "ERROR": "اجبار احراز هویت دومرحله‌ای ذخیره نشد"
         }
       },
       "AUTO_RESOLVE_DURATION": {
@@ -162,9 +162,9 @@
     },
     "UPDATE_CHATWOOT": "به روزرسانی{latestChatwootVersion} برای Chatwoot در دسترس است. لطفا نمونه خود را به روز کنید.",
     "LEARN_MORE": "بیشتر بدانید",
-    "PAYMENT_PENDING": "Your account payment is past due. Please update your payment information to avoid subscription cancellation.",
-    "PAYMENT_PENDING_AGENT": "Your account payment is past due. Please contact your administrator to resolve it.",
-    "UPGRADE": "Upgrade to continue using Chatwoot",
+    "PAYMENT_PENDING": "پرداخت حساب عقب افتاده. برای جلوگیری از لغو اشتراک، اطلاعات پرداخت را به‌روز کنید.",
+    "PAYMENT_PENDING_AGENT": "پرداخت حساب عقب افتاده. با مدیر تماس بگیرید.",
+    "UPGRADE": "برای ادامه استفاده ارتقا دهید",
     "LIMITS_UPGRADE": "حساب شما از محدودیت های استفاده فراتر رفته است، لطفاً برای ادامه استفاده از Chatwoot برنامه خود را ارتقا دهید",
     "OPEN_BILLING": "باز کردن صورتحساب"
   },
@@ -172,7 +172,7 @@
     "MULTISELECT": {
       "ENTER_TO_SELECT": "برای انتخاب Enter را فشار دهید",
       "ENTER_TO_REMOVE": "برای حذف دکمه enter را فشار دهید",
-      "NO_OPTIONS": "List is empty",
+      "NO_OPTIONS": "فهرست خالی است",
       "SELECT_ONE": "یکی را انتخاب کن",
       "SELECT": "انتخاب کنید"
     }
@@ -180,8 +180,8 @@
   "NETWORK": {
     "NOTIFICATION": {
       "OFFLINE": "آفلاین",
-      "RECONNECTING": "Reconnecting...",
-      "RECONNECT_SUCCESS": "Reconnected"
+      "RECONNECTING": "در حال اتصال دوباره…",
+      "RECONNECT_SUCCESS": "دوباره وصل شد"
     },
     "BUTTON": {
       "REFRESH": "تازه کردن"
@@ -189,17 +189,17 @@
   },
   "COMMAND_BAR": {
     "SEARCH_PLACEHOLDER": "جستجو یا پرش به",
-    "SNOOZE_PLACEHOLDER": "Type a time e.g. tomorrow, 2 hours, next friday, jan 15...",
+    "SNOOZE_PLACEHOLDER": "زمانی بنویسید، مثلاً فردا، ۲ ساعت، جمعه بعد",
     "SECTIONS": {
       "GENERAL": "عمومی",
       "REPORTS": "گزارشات",
       "CONVERSATION": "گفتگو",
-      "BULK_ACTIONS": "Bulk Actions",
+      "BULK_ACTIONS": "کارهای گروهی",
       "CHANGE_ASSIGNEE": "اپراتور را تغییر دهید",
       "CHANGE_PRIORITY": "تغییر اولویت",
       "CHANGE_TEAM": "تیم را تغییر دهید",
       "SNOOZE_CONVERSATION": "به تعویق انداختن مکالمه",
-      "EXECUTE_MACRO": "Execute Macro",
+      "EXECUTE_MACRO": "اجرای ماکرو",
       "ADD_LABEL": "برچسب را به مکالمه اضافه کنید",
       "REMOVE_LABEL": "برچسب را از مکالمه حذف کنید",
       "SETTINGS": "تنظیمات",
@@ -208,21 +208,21 @@
       "SNOOZE_NOTIFICATION": "به تعویق انداختن آگاه‌سازی"
     },
     "COMMANDS": {
-      "GO_TO_MY_INBOX": "Go to My Inbox",
+      "GO_TO_MY_INBOX": "رفتن به صندوق من",
       "GO_TO_CONVERSATION_DASHBOARD": "به داشبورد مکالمه بروید",
       "GO_TO_CONTACTS_DASHBOARD": "به داشبورد مخاطبین بروید",
-      "GO_TO_CAPTAIN": "Go to Captain",
-      "GO_TO_CALLS_DASHBOARD": "Go to Calls Dashboard",
-      "GO_TO_CAMPAIGNS": "Go to Campaigns",
-      "GO_TO_HELP_CENTER": "Go to Help Center",
+      "GO_TO_CAPTAIN": "رفتن به کاپیتان",
+      "GO_TO_CALLS_DASHBOARD": "رفتن به تماس‌ها",
+      "GO_TO_CAMPAIGNS": "رفتن به کمپین‌ها",
+      "GO_TO_HELP_CENTER": "رفتن به مرکز راهنما",
       "GO_TO_REPORTS_OVERVIEW": "به نمای کلی گزارش ها بروید",
       "GO_TO_CONVERSATION_REPORTS": "به گزارش های گفتگو بروید",
       "GO_TO_AGENT_REPORTS": "به گزارش های اپراتور بروید",
       "GO_TO_LABEL_REPORTS": "به گزارش برچسب بروید",
       "GO_TO_INBOX_REPORTS": "به گزارش صندوق ورودی بروید",
       "GO_TO_TEAM_REPORTS": "به گزارش تیم بروید",
-      "GO_TO_CSAT_REPORTS": "Go to CSAT Reports",
-      "GO_TO_BOT_REPORTS": "Go to Bot Reports",
+      "GO_TO_CSAT_REPORTS": "رفتن به گزارش رضایت",
+      "GO_TO_BOT_REPORTS": "رفتن به گزارش ربات",
       "GO_TO_SLA_REPORTS": "Go to SLA Reports",
       "GO_TO_SETTINGS_AGENTS": "به تنظیمات اپراتور بروید",
       "GO_TO_SETTINGS_TEAMS": "به تنظیمات تیم بروید",
