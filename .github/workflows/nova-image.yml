@@ -1,0 +1,111 @@
+name: Publish and deploy Nova Chatwoot
+
+on:
+  push:
+    branches: [main]
+
+permissions: {}
+
+concurrency:
+  group: nova-chatwoot-release
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    if: github.repository == 'nova-ventures-ir/chatwoot'
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    permissions:
+      contents: read
+      packages: write
+    outputs:
+      digest: ${{ steps.image.outputs.digest }}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - uses: docker/setup-buildx-action@8d2750c68a42422c14e847fe6c8ac0403b4cbd6f
+      - uses: docker/login-action@c94ce9fb468520275223c153574b00df6fe4bcc9
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - uses: docker/build-push-action@10e90e3645eae34f1e60eeb005ba3a3d33f178e8
+        id: image
+        with:
+          context: .
+          file: docker/Dockerfile
+          platforms: linux/amd64
+          push: true
+          tags: ghcr.io/nova-ventures-ir/nova-chatwoot:${{ github.sha }}
+          labels: |
+            org.opencontainers.image.source=https://github.com/nova-ventures-ir/chatwoot
+            org.opencontainers.image.revision=${{ github.sha }}
+
+  update-gitops:
+    needs: publish
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment: chatwoot-release
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          repository: nova-ventures-ir/nova-gitops
+          ref: main
+          ssh-key: ${{ secrets.CHATWOOT_GITOPS_DEPLOY_KEY }}
+      - name: Pin the published image in GitOps
+        env:
+          IMAGE_DIGEST: ${{ needs.publish.outputs.digest }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          read -r latest_commit _ < <(git ls-remote --exit-code https://github.com/nova-ventures-ir/chatwoot.git refs/heads/main)
+          if [[ "$latest_commit" != "$GITHUB_SHA" ]]; then
+            echo 'A newer Chatwoot commit is on main. Skipping deployment of this image.'
+            exit 0
+          fi
+
+          python3 - <<'PY'
+          import os
+          import re
+          from pathlib import Path
+
+          sha = os.environ['GITHUB_SHA']
+          digest = os.environ['IMAGE_DIGEST']
+          if not re.fullmatch(r'[0-9a-f]{40}', sha) or not re.fullmatch(r'sha256:[0-9a-f]{64}', digest):
+              raise SystemExit('Invalid Chatwoot source SHA or image digest')
+
+          repository = 'ghcr.io/nova-ventures-ir/nova-chatwoot'
+          values_path = Path('platform/chatwoot/values.yaml')
+          release_path = Path('platform/chatwoot/release.yaml')
+          values = values_path.read_text()
+          release = release_path.read_text()
+          pin = re.search(r'^  tag: ([0-9a-f]{12,40}@sha256:[0-9a-f]{64})$', values, re.MULTILINE)
+          if f'  repository: {repository}\n' not in values or not pin:
+              raise SystemExit('Unexpected Chatwoot image in Helm values')
+          old_tag = pin.group(1)
+          references = re.findall(r'^ +image: "?(' + re.escape(repository) + r':[^"\s]+)"?$', release, re.MULTILINE)
+          if not references or set(references) != {f'{repository}:{old_tag}'}:
+              raise SystemExit('Chatwoot release and Helm image pins disagree')
+
+          new_tag = f'{sha}@{digest}'
+          values_path.write_text(values.replace(f'  tag: {old_tag}\n', f'  tag: {new_tag}\n', 1))
+          release_path.write_text(release.replace(f'{repository}:{old_tag}', f'{repository}:{new_tag}'))
+          PY
+
+          git add platform/chatwoot/values.yaml platform/chatwoot/release.yaml
+          if git diff --cached --quiet; then
+            echo 'GitOps already pins this Chatwoot image.'
+            exit 0
+          fi
+          git -c user.name=nova-ci -c user.email=nova-ci@users.noreply.github.com \
+            commit -m "ci: deploy Chatwoot ${GITHUB_SHA:0:12}"
+          for attempt in 1 2 3; do
+            if git push origin HEAD:refs/heads/main; then
+              exit 0
+            fi
+            if (( attempt < 3 )); then
+              git pull --rebase origin main
+            fi
+          done
+          exit 1
