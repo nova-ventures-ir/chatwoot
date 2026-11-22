@@ -691,6 +691,11 @@ Rails.application.routes.draw do
             end
           end
           resources :email_channel_migrations, only: [:create]
+          resources :web_widgets, only: [:create] do
+            member do
+              post :add_member
+            end
+          end
         end
       end
     end
