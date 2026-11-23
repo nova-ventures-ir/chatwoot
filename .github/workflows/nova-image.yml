@@ -15,11 +15,13 @@ jobs:
     if: github.repository == 'nova-ventures-ir/chatwoot'
     runs-on: ubuntu-latest
     timeout-minutes: 45
+    environment: chatwoot-registry
     permissions:
       contents: read
       packages: write
     outputs:
       digest: ${{ steps.image.outputs.digest }}
+      repository: ${{ steps.arvan.outputs.repository }}
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with:
@@ -44,6 +46,35 @@ jobs:
             org.opencontainers.image.source=https://github.com/nova-ventures-ir/chatwoot
             org.opencontainers.image.revision=${{ github.sha }}
 
+      - name: Install Skopeo
+        run: |
+          if ! command -v skopeo >/dev/null; then
+            sudo apt-get update -qq
+            sudo apt-get install -yq skopeo
+          fi
+      - name: Copy the published image to Arvan
+        id: arvan
+        env:
+          IMAGE_DIGEST: ${{ steps.image.outputs.digest }}
+          ARVAN_REGISTRY_HOST: ${{ vars.ARVAN_REGISTRY_HOST }}
+          ARVAN_USERNAME: ${{ secrets.ARVAN_REGISTRY_USERNAME }}
+          ARVAN_PASSWORD: ${{ secrets.ARVAN_REGISTRY_PASSWORD }}
+          GHCR_PASSWORD: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          umask 077
+          authfile="$RUNNER_TEMP/chatwoot-registry-auth.json"
+          printf '%s' "$GHCR_PASSWORD" | skopeo login --authfile "$authfile" --username "$GITHUB_ACTOR" --password-stdin ghcr.io
+          printf '%s' "$ARVAN_PASSWORD" | skopeo login --authfile "$authfile" --username "$ARVAN_USERNAME" --password-stdin "$ARVAN_REGISTRY_HOST"
+          repository="$ARVAN_REGISTRY_HOST/nova-chatwoot"
+          target="docker://$repository:$GITHUB_SHA"
+          skopeo copy --all --preserve-digests --retry-times 2 --authfile "$authfile" \
+            "docker://ghcr.io/nova-ventures-ir/nova-chatwoot@$IMAGE_DIGEST" "$target"
+          actual="$(skopeo inspect --raw --authfile "$authfile" "$target" | sha256sum | cut -d ' ' -f 1)"
+          test "sha256:$actual" = "$IMAGE_DIGEST"
+          echo "repository=$repository" >> "$GITHUB_OUTPUT"
+
   update-gitops:
     needs: publish
     runs-on: ubuntu-latest
@@ -58,6 +89,7 @@ jobs:
       - name: Pin the published image in GitOps
         env:
           IMAGE_DIGEST: ${{ needs.publish.outputs.digest }}
+          IMAGE_REPOSITORY: ${{ needs.publish.outputs.repository }}
         shell: bash
         run: |
           set -euo pipefail
@@ -77,22 +109,27 @@ jobs:
           if not re.fullmatch(r'[0-9a-f]{40}', sha) or not re.fullmatch(r'sha256:[0-9a-f]{64}', digest):
               raise SystemExit('Invalid Chatwoot source SHA or image digest')
 
-          repository = 'ghcr.io/nova-ventures-ir/nova-chatwoot'
+          repository = os.environ['IMAGE_REPOSITORY']
+          if not re.fullmatch(r'registry-[0-9a-f]{10}-nova-chatwoot-registry\.apps\.ir-central1\.arvancaas\.ir/nova-chatwoot', repository):
+              raise SystemExit('Invalid Chatwoot Arvan repository')
+
           values_path = Path('platform/chatwoot/values.yaml')
           release_path = Path('platform/chatwoot/release.yaml')
           values = values_path.read_text()
           release = release_path.read_text()
+          current = re.search(r'^  repository: ([^\s]+)$', values, re.MULTILINE)
           pin = re.search(r'^  tag: ([0-9a-f]{12,40}@sha256:[0-9a-f]{64})$', values, re.MULTILINE)
-          if f'  repository: {repository}\n' not in values or not pin:
+          if not current or current.group(1) not in (repository, 'ghcr.io/nova-ventures-ir/nova-chatwoot') or not pin:
               raise SystemExit('Unexpected Chatwoot image in Helm values')
-          old_tag = pin.group(1)
-          references = re.findall(r'^ +image: "?(' + re.escape(repository) + r':[^"\s]+)"?$', release, re.MULTILINE)
-          if not references or set(references) != {f'{repository}:{old_tag}'}:
+          old_repository, old_tag = current.group(1), pin.group(1)
+          references = re.findall(r'^ +image: "?([^"\s]+/nova-chatwoot:[^"\s]+)"?$', release, re.MULTILINE)
+          if not references or set(references) != {f'{old_repository}:{old_tag}'}:
               raise SystemExit('Chatwoot release and Helm image pins disagree')
 
           new_tag = f'{sha}@{digest}'
+          values = values.replace(f'  repository: {old_repository}\n', f'  repository: {repository}\n', 1)
           values_path.write_text(values.replace(f'  tag: {old_tag}\n', f'  tag: {new_tag}\n', 1))
-          release_path.write_text(release.replace(f'{repository}:{old_tag}', f'{repository}:{new_tag}'))
+          release_path.write_text(release.replace(f'{old_repository}:{old_tag}', f'{repository}:{new_tag}'))
           PY
 
           git add platform/chatwoot/values.yaml platform/chatwoot/release.yaml
