@@ -46,7 +46,14 @@
 #
 class SuperAdmin < User
   def generate_super_admin_sso_link
-    encoded_email = ERB::Util.url_encode(email)
-    "#{ENV.fetch('FRONTEND_URL', nil)}/super_admin/sso?email=#{encoded_email}&sso_auth_token=#{generate_sso_auth_token}"
+    "#{ENV.fetch('FRONTEND_URL', nil)}/super_admin/sso/#{super_admin_sso_code}"
+  end
+
+  # The code is the only lookup key. Email plus the shared user SSO key can miss
+  # the row that just issued the link, which drops the iframe on the login page.
+  def super_admin_sso_code
+    token = SecureRandom.hex(32)
+    Redis::Alfred.setex(format(Redis::RedisKeys::SUPER_ADMIN_SSO, token: token), id, 5.minutes)
+    Rails.application.message_verifier(:super_admin_sso).generate(token, expires_in: 5.minutes, purpose: :super_admin_sso)
   end
 end
