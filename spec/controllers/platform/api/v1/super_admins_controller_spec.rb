@@ -22,7 +22,8 @@ RSpec.describe 'Platform Super Admin API', type: :request do
       expect(response).to have_http_status(:success)
       admin = SuperAdmin.from_email('super.user-1@support.invalid')
       expect(admin.custom_attributes['nova_user_id']).to eq('user-1')
-      expect(response.parsed_body['url']).to start_with('https://chat.example/super_admin/sso?email=super.user-1%40support.invalid&sso_auth_token=')
+      expect(response.parsed_body['url']).to start_with('https://chat.example/super_admin/sso/')
+      expect(response.parsed_body['url']).not_to include('sso_auth_token')
       expect(platform_app.platform_app_permissibles.where(permissible: admin)).to exist
     end
 

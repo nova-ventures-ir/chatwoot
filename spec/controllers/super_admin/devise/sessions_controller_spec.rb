@@ -41,14 +41,14 @@ RSpec.describe 'Super Admin', type: :request do
     let(:super_admin) { create(:super_admin) }
 
     it 'posts the one-time token from the iframe and then opens super admin' do
-      token = super_admin.generate_sso_auth_token
+      code = super_admin.super_admin_sso_code
 
-      get '/super_admin/sso', params: { email: super_admin.email, sso_auth_token: token }
+      get "/super_admin/sso/#{code}"
 
       expect(response).to have_http_status(:ok)
       expect(response.body).to include('method="post"')
 
-      post '/super_admin/sso', params: { email: super_admin.email, sso_auth_token: token }
+      post "/super_admin/sso/#{code}"
 
       expect(response).to have_http_status(:ok)
       expect(response.body).to include('location.replace("/super_admin")')
@@ -57,17 +57,17 @@ RSpec.describe 'Super Admin', type: :request do
     end
 
     it 'rejects a token after it has been used' do
-      token = super_admin.generate_sso_auth_token
-      post '/super_admin/sso', params: { email: super_admin.email, sso_auth_token: token }
+      code = super_admin.super_admin_sso_code
+      post "/super_admin/sso/#{code}"
       reset!
 
-      post '/super_admin/sso', params: { email: super_admin.email, sso_auth_token: token }
+      post "/super_admin/sso/#{code}"
 
       expect(response).to redirect_to(new_super_admin_session_path)
     end
 
     it 'leaves a missing token on the login page' do
-      get '/super_admin/sso', params: { email: super_admin.email }
+      get '/super_admin/sso/not-a-token'
 
       expect(response).to redirect_to(new_super_admin_session_path)
     end
