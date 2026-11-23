@@ -37,6 +37,8 @@ jobs:
           file: docker/Dockerfile
           platforms: linux/amd64
           push: true
+          cache-from: type=gha,scope=nova-chatwoot-amd64
+          cache-to: type=gha,scope=nova-chatwoot-amd64,mode=max,ignore-error=true
           tags: ghcr.io/nova-ventures-ir/nova-chatwoot:${{ github.sha }}
           labels: |
             org.opencontainers.image.source=https://github.com/nova-ventures-ir/chatwoot
