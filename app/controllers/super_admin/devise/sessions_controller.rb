@@ -10,6 +10,15 @@ class SuperAdmin::Devise::SessionsController < Devise::SessionsController
     self.resource = resource_class.new(sign_in_params)
   end
 
+  def sso
+    super_admin = SuperAdmin.from_email(params[:email])
+    token = params[:sso_auth_token].to_s
+    return redirect_to(new_super_admin_session_path) unless super_admin&.valid_sso_auth_token?(token)
+    return redirect_to(new_super_admin_session_path) unless super_admin.consume_sso_auth_token(token)
+
+    complete_sign_in(super_admin)
+  end
+
   def create
     return verify_mfa_code if mfa_code_submission?
 

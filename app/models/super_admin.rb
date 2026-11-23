@@ -45,4 +45,8 @@
 #  index_users_on_uid_and_provider        (uid,provider) UNIQUE
 #
 class SuperAdmin < User
+  def generate_super_admin_sso_link
+    encoded_email = ERB::Util.url_encode(email)
+    "#{ENV.fetch('FRONTEND_URL', nil)}/super_admin/sso?email=#{encoded_email}&sso_auth_token=#{generate_sso_auth_token}"
+  end
 end

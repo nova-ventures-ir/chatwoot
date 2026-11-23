@@ -42,6 +42,10 @@ Rails.application.configure do
   # Store uploaded files on the local file system (see config/storage.yml for options)
   config.active_storage.service = ENV.fetch('ACTIVE_STORAGE_SERVICE', 'local').to_sym
 
+  # TLS terminates at the gateway. Treat public HTTPS installs as SSL so the
+  # super-admin session cookie can be Secure without a redirect loop.
+  config.assume_ssl = ENV.fetch('FRONTEND_URL', '').start_with?('https://')
+
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
   config.force_ssl = ActiveModel::Type::Boolean.new.cast(ENV.fetch('FORCE_SSL', false))
 

@@ -37,6 +37,30 @@ RSpec.describe 'Super Admin', type: :request do
     end
   end
 
+  describe 'GET /super_admin/sso' do
+    let(:super_admin) { create(:super_admin) }
+
+    it 'signs in with a one-time token and rejects a second use' do
+      token = super_admin.generate_sso_auth_token
+
+      get '/super_admin/sso', params: { email: super_admin.email, sso_auth_token: token }
+
+      expect(response).to redirect_to(super_admin_root_path)
+      follow_redirect!
+      expect(response).to have_http_status(:ok)
+
+      get '/super_admin/sso', params: { email: super_admin.email, sso_auth_token: token }
+
+      expect(response).to redirect_to(new_super_admin_session_path)
+    end
+
+    it 'leaves a missing token on the login page' do
+      get '/super_admin/sso', params: { email: super_admin.email }
+
+      expect(response).to redirect_to(new_super_admin_session_path)
+    end
+  end
+
   describe 'POST /super_admin/sign_in with two-factor authentication enabled' do
     let(:super_admin) { create(:super_admin, password: 'Password1!') }
 
