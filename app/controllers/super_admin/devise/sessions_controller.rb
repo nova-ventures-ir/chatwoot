@@ -10,13 +10,21 @@ class SuperAdmin::Devise::SessionsController < Devise::SessionsController
     self.resource = resource_class.new(sign_in_params)
   end
 
+  # The panel loads this inside a cross-site iframe. A 302 drops the session cookie
+  # before the next request, so the browser lands on the login page. GET only checks
+  # the token. POST signs in and the page then navigates on the Chatwoot origin.
   def sso
-    super_admin = SuperAdmin.from_email(params[:email])
-    token = params[:sso_auth_token].to_s
-    return redirect_to(new_super_admin_session_path) unless super_admin&.valid_sso_auth_token?(token)
-    return redirect_to(new_super_admin_session_path) unless super_admin.consume_sso_auth_token(token)
+    return render_sso_auto_post if request.get?
 
-    complete_sign_in(super_admin)
+    admin = valid_sso_super_admin
+    if admin&.consume_sso_auth_token(sso_token)
+      sign_in(:super_admin, admin)
+      flash.discard
+    elsif !already_signed_in_sso_admin?
+      return redirect_to(new_super_admin_session_path)
+    end
+
+    render template: 'super_admin/devise/sessions/sso_complete', layout: false
   end
 
   def create
@@ -102,6 +110,27 @@ class SuperAdmin::Devise::SessionsController < Devise::SessionsController
 
     session.delete(:super_admin_mfa)
     nil
+  end
+
+  def render_sso_auto_post
+    return redirect_to(new_super_admin_session_path) unless valid_sso_super_admin
+
+    render template: 'super_admin/devise/sessions/sso_auto_post',
+           layout: false,
+           locals: { email: params[:email].to_s, token: sso_token }
+  end
+
+  def valid_sso_super_admin
+    admin = SuperAdmin.from_email(params[:email])
+    admin if admin&.valid_sso_auth_token?(sso_token)
+  end
+
+  def already_signed_in_sso_admin?
+    current_super_admin.present? && current_super_admin.email == params[:email].to_s.downcase
+  end
+
+  def sso_token
+    params[:sso_auth_token].to_s
   end
 
   def complete_sign_in(super_admin)

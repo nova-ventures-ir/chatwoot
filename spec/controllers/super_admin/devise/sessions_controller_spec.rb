@@ -40,16 +40,28 @@ RSpec.describe 'Super Admin', type: :request do
   describe 'GET /super_admin/sso' do
     let(:super_admin) { create(:super_admin) }
 
-    it 'signs in with a one-time token and rejects a second use' do
+    it 'posts the one-time token from the iframe and then opens super admin' do
       token = super_admin.generate_sso_auth_token
 
       get '/super_admin/sso', params: { email: super_admin.email, sso_auth_token: token }
 
-      expect(response).to redirect_to(super_admin_root_path)
-      follow_redirect!
       expect(response).to have_http_status(:ok)
+      expect(response.body).to include('method="post"')
 
-      get '/super_admin/sso', params: { email: super_admin.email, sso_auth_token: token }
+      post '/super_admin/sso', params: { email: super_admin.email, sso_auth_token: token }
+
+      expect(response).to have_http_status(:ok)
+      expect(response.body).to include('location.replace("/super_admin")')
+      get '/super_admin'
+      expect(response).to have_http_status(:ok)
+    end
+
+    it 'rejects a token after it has been used' do
+      token = super_admin.generate_sso_auth_token
+      post '/super_admin/sso', params: { email: super_admin.email, sso_auth_token: token }
+      reset!
+
+      post '/super_admin/sso', params: { email: super_admin.email, sso_auth_token: token }
 
       expect(response).to redirect_to(new_super_admin_session_path)
     end
