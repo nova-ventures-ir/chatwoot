@@ -3,39 +3,39 @@
     "HEADER": "گزارش های حسابرسی",
     "HEADER_BTN_TXT": "اضافه کردن گزارش های حسابرسی",
     "LOADING": "واکشی گزارش های حسابرسی",
-    "DESCRIPTION": "Audit Logs maintain a record of activities in your account, allowing you to track and audit your account, team, or services.",
-    "LEARN_MORE": "Learn more about audit logs",
+    "DESCRIPTION": "گزارش حسابرسی فعالیت‌های حساب را نگه می‌دارد تا تیم و خدمات را دنبال کنید.",
+    "LEARN_MORE": "درباره گزارش حسابرسی بیشتر بدانید",
     "SEARCH_404": "هیچ آیتمی با این مشخصات یافت نشد",
     "SIDEBAR_TXT": "<p><b>گزارش‌های حسابرسی</b> </p><p> گزارش‌های حسابرسی مسیرهایی برای رویدادها و اقدامات در یک سیستم Chatwoot هستند. </p>",
-    "COUNT": "{n} event | {n} events",
+    "COUNT": "{n} رویداد | {n} رویداد",
     "FILTERS": {
-      "SEARCH_PLACEHOLDER": "Search by name or email",
-      "ALL_EVENTS": "All events",
-      "DATE_RANGE": "Date range",
+      "SEARCH_PLACEHOLDER": "جستجو با نام یا ایمیل",
+      "ALL_EVENTS": "همه رویدادها",
+      "DATE_RANGE": "بازه تاریخ",
       "CLEAR_ALL": "پاک کردن فیلترها",
       "EVENT_TYPE_GROUPS": {
-        "ACCESS": "Access",
-        "AGENTS_TEAMS": "Agents & teams",
+        "ACCESS": "دسترسی",
+        "AGENTS_TEAMS": "کارشناس‌ها و تیم‌ها",
         "CONFIGURATION": "پیکربندی",
         "CONVERSATIONS": "گفتگوها"
       },
       "EVENT_TYPES": {
-        "SIGN_IN_OUT": "Sign in / sign out",
+        "SIGN_IN_OUT": "ورود / خروج",
         "AGENTS": "ایجنت ها",
         "TEAMS": "تیم‌ها",
-        "TEAM_MEMBERS": "Team members",
-        "INBOX_MEMBERS": "Inbox collaborators",
+        "TEAM_MEMBERS": "اعضای تیم",
+        "INBOX_MEMBERS": "همکاران صندوق",
         "ACCOUNT": "تنظیمات حساب",
         "INBOXES": "صندوق‌های ورودی",
         "WEBHOOKS": "وب هوک",
-        "AUTOMATION_RULES": "Automation rules",
+        "AUTOMATION_RULES": "قاعده‌های خودکارسازی",
         "MACROS": "ماکروها",
-        "CONVERSATION_DELETIONS": "Conversation deletions",
-        "MESSAGE_DELETIONS": "Message deletions"
+        "CONVERSATION_DELETIONS": "حذف گفتگو",
+        "MESSAGE_DELETIONS": "حذف پیام"
       },
       "SORT": {
-        "NEWEST": "Newest first",
-        "OLDEST": "Oldest first"
+        "NEWEST": "جدیدترین اول",
+        "OLDEST": "قدیمی‌ترین اول"
       }
     },
     "LIST": {
@@ -55,58 +55,58 @@
     },
     "DEFAULT_USER": "سیستم",
     "AUTOMATION_RULE": {
-      "ADD": "{agentName} created a new automation rule (#{id})",
-      "EDIT": "{agentName} updated an automation rule (#{id})",
-      "DELETE": "{agentName} deleted an automation rule (#{id})"
+      "ADD": "{agentName} قاعده خودکارسازی تازه ساخت (#{id})",
+      "EDIT": "{agentName} قاعده خودکارسازی را به‌روز کرد (#{id})",
+      "DELETE": "{agentName} قاعده خودکارسازی را حذف کرد (#{id})"
     },
     "ACCOUNT_USER": {
       "ADD": "{agentName} از {invitee} دعوت کرد به عنوان {role} به سیستم اضافه شود",
       "EDIT": {
         "SELF": "{agentName} مقدار {attributes} را به {values} تغییر داد",
         "OTHER": "{agentName} مقدار {attributes} مربوط به {user} را به {values} تغییر داد",
-        "DELETED": "{agentName} changed {attributes} of a deleted user to {values}"
+        "DELETED": "{agentName} مقدار {attributes} کاربر حذف‌شده را به {values} تغییر داد"
       }
     },
     "INBOX": {
-      "ADD": "{agentName} created a new inbox (#{id})",
-      "EDIT": "{agentName} updated an inbox (#{id})",
-      "DELETE": "{agentName} deleted an inbox (#{id})"
+      "ADD": "{agentName} صندوق تازه ساخت (#{id})",
+      "EDIT": "{agentName} صندوق را به‌روز کرد (#{id})",
+      "DELETE": "{agentName} صندوق را حذف کرد (#{id})"
     },
     "WEBHOOK": {
-      "ADD": "{agentName} created a new webhook (#{id})",
-      "EDIT": "{agentName} updated a webhook (#{id})",
-      "DELETE": "{agentName} deleted a webhook (#{id})"
+      "ADD": "{agentName} وب‌هوک تازه ساخت (#{id})",
+      "EDIT": "{agentName} وب‌هوک را به‌روز کرد (#{id})",
+      "DELETE": "{agentName} وب‌هوک را حذف کرد (#{id})"
     },
     "USER_ACTION": {
       "SIGN_IN": "{agentName} وارد شد",
       "SIGN_OUT": "{agentName} خارج شد"
     },
     "TEAM": {
-      "ADD": "{agentName} created a new team (#{id})",
-      "EDIT": "{agentName} updated a team (#{id})",
-      "DELETE": "{agentName} deleted a team (#{id})"
+      "ADD": "{agentName} تیم تازه ساخت (#{id})",
+      "EDIT": "{agentName} تیم را به‌روز کرد (#{id})",
+      "DELETE": "{agentName} تیم را حذف کرد (#{id})"
     },
     "MACRO": {
-      "ADD": "{agentName} created a new macro (#{id})",
-      "EDIT": "{agentName} updated a macro (#{id})",
-      "DELETE": "{agentName} deleted a macro (#{id})"
+      "ADD": "{agentName} ماکرو تازه ساخت (#{id})",
+      "EDIT": "{agentName} ماکرو را به‌روز کرد (#{id})",
+      "DELETE": "{agentName} ماکرو را حذف کرد (#{id})"
     },
     "INBOX_MEMBER": {
-      "ADD": "{agentName} added {user} to the inbox(#{inbox_id})",
-      "REMOVE": "{agentName} removed {user} from the inbox(#{inbox_id})"
+      "ADD": "{agentName}، {user} را به صندوق (#{inbox_id}) اضافه کرد",
+      "REMOVE": "{agentName}، {user} را از صندوق (#{inbox_id}) برداشت"
     },
     "TEAM_MEMBER": {
-      "ADD": "{agentName} added {user} to the team(#{team_id})",
-      "REMOVE": "{agentName} removed {user} from the team(#{team_id})"
+      "ADD": "{agentName}، {user} را به تیم (#{team_id}) اضافه کرد",
+      "REMOVE": "{agentName}، {user} را از تیم (#{team_id}) برداشت"
     },
     "ACCOUNT": {
-      "EDIT": "{agentName} updated the account configuration (#{id})"
+      "EDIT": "{agentName} پیکربندی حساب را به‌روز کرد (#{id})"
     },
     "CONVERSATION": {
-      "DELETE": "{agentName} deleted conversation #{id}"
+      "DELETE": "{agentName} گفتگوی #{id} را حذف کرد"
     },
     "MESSAGE": {
-      "DELETE": "{agentName} deleted a message in conversation #{conversationId}"
+      "DELETE": "{agentName} پیامی را در گفتگوی #{conversationId} حذف کرد"
     }
   }
 }

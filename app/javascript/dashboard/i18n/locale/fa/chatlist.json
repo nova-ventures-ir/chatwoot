@@ -7,7 +7,7 @@
       "404": "هیچ گفتگوی فعالی در این گروه نیست."
     },
     "FAILED_TO_SEND": "ارسال با خطا مواجه شد",
-    "FETCH_ERROR": "Couldn't load conversations. Please try again.",
+    "FETCH_ERROR": "گفتگوها بارگذاری نشد. دوباره تلاش کنید.",
     "TAB_HEADING": "گفتگوها",
     "MENTION_HEADING": "اشاره",
     "UNATTENDED_HEADING": "بی سرپرست",
@@ -80,7 +80,7 @@
         "TEXT": "Priority: Highest first, Created: Oldest first"
       },
       "unread": {
-        "TEXT": "Unread Count: Highest first"
+        "TEXT": "خوانده‌نشده: بیشترین اول"
       }
     },
     "ATTACHMENTS": {
@@ -106,10 +106,10 @@
         "CONTENT": "یک آدرس URL به اشتراک گذاشته شده"
       },
       "contact": {
-        "CONTENT": "Shared contact"
+        "CONTENT": "مخاطب اشتراک‌گذاری‌شده"
       },
       "embed": {
-        "CONTENT": "Embedded content"
+        "CONTENT": "محتوای جاسازی‌شده"
       }
     },
     "CHAT_SORT_BY_FILTER": {

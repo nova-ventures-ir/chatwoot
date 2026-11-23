@@ -2,7 +2,7 @@
   "HELP_CENTER": {
     "TITLE": "مرکز راهنما",
     "NEW_PAGE": {
-      "DESCRIPTION": "Create self-service help center portals for your customers. Help them find answers quickly, without waiting. Streamline inquiries, boost agent efficiency, and elevate customer support.",
+      "DESCRIPTION": "پورتال راهنمای خودخدمت برای مشتری‌ها بسازید تا بدون انتظار پاسخ را پیدا کنند و فشار روی کارشناس‌ها کمتر شود.",
       "CREATE_PORTAL_BUTTON": "ایجاد پورتال"
     },
     "HEADER": {
@@ -527,11 +527,11 @@
         }
       }
     },
-    "LOADING": "Loading...",
+    "LOADING": "در حال بارگذاری…",
     "ARTICLES_PAGE": {
       "ARTICLE_CARD": {
         "CARD": {
-          "VIEWS": "{count} view | {count} views",
+          "VIEWS": "{count} بازدید | {count} بازدید",
           "DROPDOWN_MENU": {
             "PUBLISH": "انتشار",
             "DRAFT": "پیش‌نویس",

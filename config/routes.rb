@@ -681,6 +681,7 @@ Rails.application.routes.draw do
             post :token
           end
         end
+        post 'super_admin/login', to: 'super_admins#login'
         resources :agent_bots, only: [:index, :create, :show, :update, :destroy] do
           delete :avatar, on: :member
         end
@@ -691,6 +692,11 @@ Rails.application.routes.draw do
             end
           end
           resources :email_channel_migrations, only: [:create]
+          resources :web_widgets, only: [:create] do
+            member do
+              post :add_member
+            end
+          end
         end
       end
     end
@@ -811,6 +817,7 @@ Rails.application.routes.draw do
   devise_for :super_admins, path: 'super_admin', controllers: { sessions: 'super_admin/devise/sessions' },
                             skip: [:passwords, :registrations, :confirmations]
   devise_scope :super_admin do
+    get 'super_admin/sso', to: 'super_admin/devise/sessions#sso'
     get 'super_admin/logout', to: 'super_admin/devise/sessions#destroy'
     namespace :super_admin do
       root to: 'dashboard#index'

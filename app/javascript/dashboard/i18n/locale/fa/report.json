@@ -463,17 +463,17 @@
     }
   },
   "INBOX_REPORTS": {
-    "HEADER": "نمای کلی صندوق ورودی",
-    "DESCRIPTION": "Quickly view your inbox performance with key metrics like conversations, response times, resolution times, and resolved cases—all in one place. Click an inbox name for more details.",
-    "LOADING_CHART": "در حال دریافت اطلاعات...",
-    "NO_ENOUGH_DATA": "متاسفانه اطلاعات کافی دریافت نشد، لطفا بعدا دوباره امتحان کنید",
-    "DOWNLOAD_INBOX_REPORTS": "دانلود گزارش های صندوق ورودی",
-    "FILTER_DROPDOWN_LABEL": "انتخاب صندوق ورودی",
-    "ALL_INBOXES": "All Inboxes",
-    "SEARCH_INBOX": "Search Inbox",
+    "HEADER": "نمای صندوق‌ها",
+    "DESCRIPTION": "عملکرد صندوق‌ها را با گفتگوها، زمان پاسخ و موارد حل‌شده یکجا ببینید. برای جزئیات روی نام صندوق بزنید.",
+    "LOADING_CHART": "در حال بارگذاری نمودار…",
+    "NO_ENOUGH_DATA": "داده کافی برای گزارش نیست. بعداً دوباره تلاش کنید.",
+    "DOWNLOAD_INBOX_REPORTS": "دانلود گزارش صندوق‌ها",
+    "FILTER_DROPDOWN_LABEL": "انتخاب صندوق",
+    "ALL_INBOXES": "همه صندوق‌ها",
+    "SEARCH_INBOX": "جستجوی صندوق",
     "FILTERS": {
       "INPUT_PLACEHOLDER": {
-        "INBOXES": "Search inboxes"
+        "INBOXES": "جستجوی صندوق‌ها"
       }
     },
     "METRICS": {
@@ -713,56 +713,56 @@
     }
   },
   "OVERVIEW_REPORTS": {
-    "HEADER": "بررسی اجمالی",
+    "HEADER": "نمای کلی",
     "LIVE": "زنده",
     "HEATMAP_ARIA_LABEL": "{metric} by day and hour",
     "ACCOUNT_CONVERSATIONS": {
-      "HEADER": "گفتگوها را باز کنید",
-      "LOADING_MESSAGE": "در حال بارگیری معیارهای مکالمه...",
+      "HEADER": "گفتگوهای باز",
+      "LOADING_MESSAGE": "در حال بارگذاری معیارهای گفتگو…",
       "OPEN": "باز",
-      "UNATTENDED": "بی سرپرست",
-      "UNASSIGNED": "تخصیص داده نشده",
+      "UNATTENDED": "بدون پاسخ",
+      "UNASSIGNED": "بدون مسئول",
       "PENDING": "در انتظار"
     },
     "CONVERSATION_HEATMAP": {
       "HEADER": "ترافیک گفتگو",
-      "NO_CONVERSATIONS": "بدون هیچ گفتگویی",
+      "NO_CONVERSATIONS": "گفتگویی نیست",
       "CONVERSATION": "{count} گفتگو",
       "CONVERSATIONS": "{count} گفتگو",
-      "DOWNLOAD_REPORT": "Download report"
+      "DOWNLOAD_REPORT": "دانلود گزارش"
     },
     "RESOLUTION_HEATMAP": {
-      "HEADER": "Resolutions",
-      "NO_CONVERSATIONS": "بدون هیچ گفتگویی",
+      "HEADER": "حل‌شده‌ها",
+      "NO_CONVERSATIONS": "گفتگویی نیست",
       "CONVERSATION": "{count} گفتگو",
       "CONVERSATIONS": "{count} گفتگو",
-      "DOWNLOAD_REPORT": "Download report"
+      "DOWNLOAD_REPORT": "دانلود گزارش"
     },
     "AGENT_CONVERSATIONS": {
-      "HEADER": "گفتگوهای اپراتور ها",
-      "LOADING_MESSAGE": "در حال بارگیری معیارهای اپراتور...",
-      "NO_AGENTS": "هیچ مکالمه ای توسط اپراتور ها وجود ندارد",
+      "HEADER": "گفتگوها بر اساس کارشناس",
+      "LOADING_MESSAGE": "در حال بارگذاری معیارهای کارشناس…",
+      "NO_AGENTS": "گفتگویی از کارشناس‌ها نیست",
       "TABLE_HEADER": {
-        "AGENT": "ایجنت",
+        "AGENT": "کارشناس",
         "OPEN": "باز",
-        "UNATTENDED": "بی سرپرست",
+        "UNATTENDED": "بدون پاسخ",
         "STATUS": "وضعیت"
       }
     },
     "TEAM_CONVERSATIONS": {
-      "ALL_TEAMS": "All Teams",
-      "HEADER": "Conversations by teams",
-      "LOADING_MESSAGE": "Loading team metrics...",
-      "NO_TEAMS": "There is no data available",
+      "ALL_TEAMS": "همه تیم‌ها",
+      "HEADER": "گفتگوها بر اساس تیم",
+      "LOADING_MESSAGE": "در حال بارگذاری معیارهای تیم…",
+      "NO_TEAMS": "داده‌ای موجود نیست",
       "TABLE_HEADER": {
-        "TEAM": "تیم‌",
+        "TEAM": "تیم",
         "OPEN": "باز",
-        "UNATTENDED": "بی سرپرست",
+        "UNATTENDED": "بدون پاسخ",
         "STATUS": "وضعیت"
       }
     },
     "AGENT_STATUS": {
-      "HEADER": "وضعیت اپراتور",
+      "HEADER": "وضعیت کارشناس",
       "ONLINE": "آنلاین",
       "BUSY": "مشغول",
       "OFFLINE": "آفلاین"

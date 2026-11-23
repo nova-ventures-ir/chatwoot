@@ -87,6 +87,7 @@ describe('Dashboard', () => {
     paywalled = false,
     routeName = 'home',
     commandBarV2 = false,
+    embed = false,
   } = {}) => {
     uiSettingsState.current = { command_bar_v2: commandBarV2 };
     const isPaywalled = ref(paywalled);
@@ -95,7 +96,10 @@ describe('Dashboard', () => {
       history: createMemoryHistory(),
       routes: ROUTES,
     });
-    await router.push({ name: routeName });
+    await router.push({
+      name: routeName,
+      query: embed ? { embed: '1' } : {},
+    });
     await router.isReady();
 
     wrapper = mount(Dashboard, {
@@ -124,6 +128,7 @@ describe('Dashboard', () => {
     wrapper.find('.command-bar').attributes('data-paywalled') === 'true';
 
   afterEach(() => {
+    sessionStorage.clear();
     wrapper?.unmount();
   });
 
@@ -251,6 +256,22 @@ describe('Dashboard', () => {
       });
 
       expect(isCommandBarPaywalled()).toBe(true);
+    });
+
+    it('keeps the conversation outlet and hides account chrome in embed mode', async () => {
+      await mountDashboard({ paywalled: true, embed: true });
+
+      expect(wrapper.find('.routed-content').exists()).toBe(true);
+      expect(wrapper.find('.upgrade-page').exists()).toBe(false);
+      expect(wrapper.findComponent({ name: 'AddAccountModal' }).exists()).toBe(
+        false
+      );
+      expect(wrapper.findComponent({ name: 'CopilotLauncher' }).exists()).toBe(
+        false
+      );
+      expect(
+        wrapper.findComponent({ name: 'NextSidebar' }).props('embedMode')
+      ).toBe(true);
     });
 
     it('keeps one command bar when navigating away from the upgrade page', async () => {

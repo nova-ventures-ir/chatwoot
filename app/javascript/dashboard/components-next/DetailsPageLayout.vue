@@ -1,6 +1,5 @@
 <script setup>
 import { useTemplateRef } from 'vue';
-import { useMapGetter } from 'dashboard/composables/store';
 
 import Button from 'dashboard/components-next/button/Button.vue';
 import Spinner from 'dashboard/components-next/spinner/Spinner.vue';
@@ -13,8 +12,6 @@ defineProps({
 });
 
 const emit = defineEmits(['back']);
-
-const isRTL = useMapGetter('accounts/isRTL');
 
 const activeTab = defineModel('activeTab', { type: String, default: '' });
 
@@ -31,7 +28,7 @@ defineExpose({ scrollToTabs });
     <div class="flex flex-col w-full max-w-5xl gap-8 pt-6 pb-24 mx-auto">
       <Button
         :label="backLabel"
-        :icon="isRTL ? 'i-lucide-arrow-right' : 'i-lucide-arrow-left'"
+        icon="i-lucide-arrow-left"
         variant="link"
         color="slate"
         size="sm"

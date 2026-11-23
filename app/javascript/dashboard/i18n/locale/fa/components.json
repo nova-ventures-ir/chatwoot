@@ -4,14 +4,14 @@
     "CURRENT_PAGE_INFO": "{currentPage} of {totalPages} pages"
   },
   "COMBOBOX": {
-    "PLACEHOLDER": "Select an option...",
-    "EMPTY_SEARCH_RESULTS": "No items found for the search term `{searchTerm}`",
+    "PLACEHOLDER": "یک گزینه انتخاب کنید…",
+    "EMPTY_SEARCH_RESULTS": "برای «{searchTerm}» موردی پیدا نشد",
     "EMPTY_STATE": "نتیجه‌ای یافت نشد.",
-    "SEARCH_PLACEHOLDER": "Search...",
+    "SEARCH_PLACEHOLDER": "جستجو…",
     "MORE": "+{count} بیشتر"
   },
   "DROPDOWN_MENU": {
-    "SEARCH_PLACEHOLDER": "Search...",
+    "SEARCH_PLACEHOLDER": "جستجو…",
     "EMPTY_STATE": "نتیجه‌ای یافت نشد.",
     "SEARCHING": "در حال جستجو..."
   },
@@ -23,7 +23,7 @@
   },
   "PHONE_INPUT": {
     "SEARCH_PLACEHOLDER": "جستجوی کشور",
-    "ERROR": "Phone number should be empty or in E.164 format",
+    "ERROR": "شماره باید خالی باشد یا در قالب E.164 نوشته شود",
     "DIAL_CODE_ERROR": "لطفاً یک کد شماره گیری را از لیست انتخاب کنید"
   },
   "THUMBNAIL": {
@@ -32,20 +32,20 @@
     }
   },
   "BREADCRUMB": {
-    "ARIA_LABEL": "Breadcrumb"
+    "ARIA_LABEL": "مسیر"
   },
   "SWITCH": {
-    "TOGGLE": "Toggle switch"
+    "TOGGLE": "تغییر وضعیت"
   },
   "LABEL": {
-    "TAG_BUTTON": "tag"
+    "TAG_BUTTON": "برچسب"
   },
   "FEATURE_ANNOUNCEMENT": {
-    "BADGE": "New",
-    "DISMISS": "Got it",
-    "PREVIOUS": "Previous",
-    "NEXT": "Next",
-    "DISMISS_HINT": "Press {key} to close",
+    "BADGE": "جدید",
+    "DISMISS": "متوجه شدم",
+    "PREVIOUS": "قبلی",
+    "NEXT": "بعدی",
+    "DISMISS_HINT": "برای بستن {key} را بزنید",
     "ESCAPE_KEY": "Esc",
     "CLOSE": "بستن"
   },
@@ -54,39 +54,39 @@
     "WATCH_VIDEO": "Watch video"
   },
   "DURATION_INPUT": {
-    "MINUTES": "Minutes",
-    "HOURS": "Hours",
-    "DAYS": "Days",
-    "PLACEHOLDER": "Enter duration"
+    "MINUTES": "دقیقه",
+    "HOURS": "ساعت",
+    "DAYS": "روز",
+    "PLACEHOLDER": "مدت را وارد کنید"
   },
   "CHANNEL_SELECTOR": {
-    "COMING_SOON": "Coming Soon!"
+    "COMING_SOON": "به‌زودی"
   },
   "SLASH_COMMANDS": {
-    "HEADING_1": "Heading 1",
-    "HEADING_2": "Heading 2",
-    "HEADING_3": "Heading 3",
-    "BOLD": "Bold",
-    "ITALIC": "Italic",
-    "STRIKETHROUGH": "Strikethrough",
-    "CODE": "Code",
-    "BULLET_LIST": "Bullet List",
-    "ORDERED_LIST": "Ordered List",
-    "TABLE": "Table",
-    "IMAGE": "Image",
-    "VIDEO": "Video",
-    "DIVIDER": "Divider"
+    "HEADING_1": "عنوان ۱",
+    "HEADING_2": "عنوان ۲",
+    "HEADING_3": "عنوان ۳",
+    "BOLD": "درشت",
+    "ITALIC": "مورب",
+    "STRIKETHROUGH": "خط‌خورده",
+    "CODE": "کد",
+    "BULLET_LIST": "فهرست نشانه‌ای",
+    "ORDERED_LIST": "فهرست شماره‌ای",
+    "TABLE": "جدول",
+    "IMAGE": "تصویر",
+    "VIDEO": "ویدیو",
+    "DIVIDER": "جداکننده"
   },
   "VIDEO_EMBED": {
-    "TAB_EMBED": "Embed link",
-    "TAB_UPLOAD": "Upload",
-    "PLACEHOLDER": "Paste a video link",
+    "TAB_EMBED": "پیوند",
+    "TAB_UPLOAD": "بارگذاری",
+    "PLACEHOLDER": "پیوند ویدیو را بچسبانید",
     "HINT": "Works with YouTube, Vimeo, Loom, Wistia, Arcade, Bunny, CodePen, GuideJar and mp4 links",
     "ERROR": "That doesn't look like a supported video link",
     "UPLOAD_LABEL": "Choose a video file",
     "UPLOAD_HINT": "MP4 · up to {size}MB · or drop it here",
     "UPLOAD_ERROR": "Only MP4 files can be uploaded",
-    "ADD": "Embed",
+    "ADD": "جاسازی",
     "CANCEL": "انصراف"
   }
 }

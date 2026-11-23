@@ -1,3 +1,4 @@
+import faLocale from 'date-fns/locale/fa-IR';
 import {
   format,
   isSameYear,
@@ -9,6 +10,17 @@ import {
   differenceInDays,
 } from 'date-fns';
 
+const dateLocale = () =>
+  document.querySelector('[dir="rtl"]') ? { locale: faLocale } : {};
+
+const formatLocalized = (date, pattern) => {
+  const options = dateLocale();
+  const localizedPattern = options.locale
+    ? pattern.replace(/MMMM|MMM|LLL/g, 'MMMM')
+    : pattern;
+  return format(date, localizedPattern, options);
+};
+
 /**
  * Formats a Unix timestamp into a human-readable time format.
  * @param {number} time - Unix timestamp.
@@ -17,7 +29,7 @@ import {
  */
 export const messageStamp = (time, dateFormat = 'h:mm a') => {
   const unixTime = fromUnixTime(time);
-  return format(unixTime, dateFormat);
+  return formatLocalized(unixTime, dateFormat);
 };
 
 /**
@@ -29,9 +41,9 @@ export const messageStamp = (time, dateFormat = 'h:mm a') => {
 export const messageTimestamp = (time, dateFormat = 'MMM d, yyyy') => {
   const messageTime = fromUnixTime(time);
   const now = new Date();
-  const messageDate = format(messageTime, dateFormat);
+  const messageDate = formatLocalized(messageTime, dateFormat);
   if (!isSameYear(messageTime, now)) {
-    return format(messageTime, 'LLL d y, h:mm a');
+    return formatLocalized(messageTime, 'LLL d y, h:mm a');
   }
   return messageDate;
 };
@@ -46,10 +58,10 @@ export const messageTimestamp = (time, dateFormat = 'MMM d, yyyy') => {
  */
 export const relativeDayTimestamp = (time, yesterdayLabel) => {
   const date = fromUnixTime(time);
-  if (isToday(date)) return format(date, 'h:mm a');
+  if (isToday(date)) return formatLocalized(date, 'h:mm a');
   if (isYesterday(date)) return yesterdayLabel;
-  if (isThisYear(date)) return format(date, 'MMM d');
-  return format(date, 'MMM d, yyyy');
+  if (isThisYear(date)) return formatLocalized(date, 'MMM d');
+  return formatLocalized(date, 'MMM d, yyyy');
 };
 
 /**
@@ -62,6 +74,11 @@ export const dynamicTime = time => {
   return formatDistanceToNow(unixTime, { addSuffix: true });
 };
 
+export const localizedDynamicTime = time => {
+  const unixTime = fromUnixTime(time);
+  return formatDistanceToNow(unixTime, { addSuffix: true, ...dateLocale() });
+};
+
 /**
  * Formats a Unix timestamp into a specified date format.
  * @param {number} time - Unix timestamp.
@@ -70,7 +87,7 @@ export const dynamicTime = time => {
  */
 export const dateFormat = (time, df = 'MMM d, yyyy') => {
   const unixTime = fromUnixTime(time);
-  return format(unixTime, df);
+  return formatLocalized(unixTime, df);
 };
 
 /**

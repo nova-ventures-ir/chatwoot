@@ -245,18 +245,18 @@
   },
   "SIDEBAR_ITEMS": {
     "CHANGE_AVAILABILITY_STATUS": "تغییر",
-    "CHANGE_ACCOUNTS": "Switch account",
-    "SWITCH_ACCOUNT": "Switch account",
-    "CONTACT_SUPPORT": "Contact support",
+    "CHANGE_ACCOUNTS": "تعویض حساب",
+    "SWITCH_ACCOUNT": "تعویض حساب",
+    "CONTACT_SUPPORT": "تماس با پشتیبانی",
     "SELECTOR_SUBTITLE": "از لیست یکی از حساب‌ها را انتخاب کنید",
-    "PROFILE_SETTINGS": "Profile settings",
-    "YEAR_IN_REVIEW": "Year in Review",
-    "KEYBOARD_SHORTCUTS": "Keyboard shortcuts",
-    "APPEARANCE": "Change appearance",
-    "SUPER_ADMIN_CONSOLE": "SuperAdmin console",
-    "DOCS": "Read documentation",
-    "CHANGELOG": "Changelog",
-    "LOGOUT": "Log out"
+    "PROFILE_SETTINGS": "تنظیمات پروفایل",
+    "YEAR_IN_REVIEW": "مرور سال",
+    "KEYBOARD_SHORTCUTS": "میانبرهای صفحه‌کلید",
+    "APPEARANCE": "تغییر ظاهر",
+    "SUPER_ADMIN_CONSOLE": "کنسول مدیر کل",
+    "DOCS": "مستندات",
+    "CHANGELOG": "تغییرات نسخه",
+    "LOGOUT": "خروج"
   },
   "APP_GLOBAL": {
     "TRIAL_MESSAGE": "روز تا اتمام دوره آزمایشی باقی است.",
@@ -266,19 +266,19 @@
     "RESEND_VERIFICATION_MAIL": "ارسال مجدد ایمیل تایید",
     "EMAIL_VERIFICATION_SENT": "ایمیل تایید ارسال شد. لطفا ایمیل خود را بررسی کنید.",
     "IMPERSONATION": {
-      "MESSAGE": "You are impersonating {name} ({email}). Any action you take will appear as this user.",
-      "STOP": "Stop impersonating"
+      "MESSAGE": "شما در نقش {name} ({email}) وارد شده‌اید. کارهایی که انجام می‌دهید به نام این کاربر ثبت می‌شود.",
+      "STOP": "پایان ورود به‌جای کاربر"
     },
     "ACCOUNT_SUSPENDED": {
       "TITLE": "حساب‌کاربری معلق شده است",
       "MESSAGE": "حساب‌کاربری شما به حالت تعلیق درآمده. لطفا برای اطلاعات بیشتر با تیم پشتیبانی تماس بگیرید.",
-      "MANAGE_BILLING": "Manage billing"
+      "MANAGE_BILLING": "مدیریت صورتحساب"
     },
     "NO_ACCOUNTS": {
-      "TITLE": "No account found",
-      "MESSAGE_CLOUD": "You are not part of any accounts right now. If you think this is a mistake, please reach out to our support team.",
-      "MESSAGE_SELF_HOSTED": "You are not part of any accounts right now. Please reach out to your administrator.",
-      "LOGOUT": "Log out"
+      "TITLE": "حسابی پیدا نشد",
+      "MESSAGE_CLOUD": "الان عضو هیچ حسابی نیستید. اگر فکر می‌کنید اشتباه است با پشتیبانی تماس بگیرید.",
+      "MESSAGE_SELF_HOSTED": "الان عضو هیچ حسابی نیستید. با مدیر سیستم تماس بگیرید.",
+      "LOGOUT": "خروج"
     }
   },
   "COMPONENTS": {
@@ -305,8 +305,8 @@
       "SUBMIT": "ثبت"
     },
     "MEDIA": {
-      "IMAGE_UNAVAILABLE": "This image is no longer available.",
-      "LOADING_FAILED": "Loading failed"
+      "IMAGE_UNAVAILABLE": "این تصویر دیگر در دسترس نیست.",
+      "LOADING_FAILED": "بارگذاری ناموفق بود"
     }
   },
   "CONFIRM_EMAIL": "در حال تایید...",
@@ -316,12 +316,12 @@
     }
   },
   "SIDEBAR": {
-    "NO_ITEMS": "No items",
+    "NO_ITEMS": "موردی نیست",
     "CURRENTLY_VIEWING_ACCOUNT": "در حال مشاهده:",
     "SWITCH": "تعویض",
-    "INBOX_VIEW": "Inbox View",
+    "INBOX_VIEW": "نمای صندوق",
     "CONVERSATIONS": "گفتگوها",
-    "INBOX": "My Inbox",
+    "INBOX": "صندوق من",
     "ALL_CONVERSATIONS": "همه گفتگوها",
     "MENTIONED_CONVERSATIONS": "اشاره",
     "PARTICIPATING_CONVERSATIONS": "شرکت کننده",
@@ -331,16 +331,16 @@
     "CONTACTS": "مخاطبین",
     "ACTIVE": "فعال",
     "COMPANIES": "شرکت ها",
-    "ALL_COMPANIES": "All Companies",
-    "CAPTAIN": "Captain",
-    "CALLS": "Calls",
-    "CAPTAIN_ASSISTANTS": "Assistants",
+    "ALL_COMPANIES": "همه شرکت‌ها",
+    "CAPTAIN": "کاپیتان",
+    "CALLS": "تماس‌ها",
+    "CAPTAIN_ASSISTANTS": "دستیارها",
     "CAPTAIN_OVERVIEW": "بررسی اجمالی",
-    "CAPTAIN_DOCUMENTS": "Documents",
-    "CAPTAIN_RESPONSES": "FAQs",
-    "CAPTAIN_TOOLS": "Tools",
-    "CAPTAIN_SCENARIOS": "Scenarios",
-    "CAPTAIN_PLAYGROUND": "Playground",
+    "CAPTAIN_DOCUMENTS": "سندها",
+    "CAPTAIN_RESPONSES": "پرسش‌های متداول",
+    "CAPTAIN_TOOLS": "ابزارها",
+    "CAPTAIN_SCENARIOS": "سناریوها",
+    "CAPTAIN_PLAYGROUND": "محیط آزمایش",
     "CAPTAIN_INBOXES": "صندوق‌های ورودی",
     "CAPTAIN_SETTINGS": "تنظیمات",
     "HOME": "صفحه اصلی",
@@ -348,11 +348,11 @@
     "AGENT_BOTS": "ربات‌ها",
     "AUDIT_LOGS": "بررسی لاگ هاگزارش های حسابرسی",
     "INBOXES": "صندوق‌های ورودی",
-    "WHATSAPP_TEMPLATES": "Templates",
+    "WHATSAPP_TEMPLATES": "قالب‌ها",
     "NOTIFICATIONS": "اعلان ها",
     "CANNED_RESPONSES": "پاسخ‌های آماده",
     "INTEGRATIONS": "برنامه‌های تلفیق شده",
-    "DATA": "Data",
+    "DATA": "داده",
     "PROFILE_SETTINGS": "تنظیمات پروفایل",
     "ACCOUNT_SETTINGS": "تنظیمات حساب",
     "APPLICATIONS": "برنامه های کاربردی",
@@ -371,7 +371,7 @@
     "NEW_INBOX": "صندوق ورودی جدید",
     "REPORTS_CONVERSATION": "گفتگوها",
     "CSAT": "رضایت مشتری",
-    "LIVE_CHAT": "Live Chat",
+    "LIVE_CHAT": "گفتگوی زنده",
     "SMS": "SMS",
     "WHATSAPP": "WhatsApp",
     "CAMPAIGNS": "کمپین ها",
@@ -383,17 +383,17 @@
     "REPORTS_LABEL": "برچسب‌ها",
     "REPORTS_INBOX": "صندوق ورودی",
     "REPORTS_TEAM": "تیم‌",
-    "AGENT_ASSIGNMENT": "Agent Assignment",
+    "AGENT_ASSIGNMENT": "تخصیص کارشناس",
     "SET_AVAILABILITY_TITLE": "خود را به عنوان",
     "SET_YOUR_AVAILABILITY": "در دسترس بودن خود را تنظیم کنید",
     "SLA": "SLA",
-    "CUSTOM_ROLES": "Custom Roles",
+    "CUSTOM_ROLES": "نقش‌های سفارشی",
     "BETA": "آزمایشی",
     "REPORTS_OVERVIEW": "بررسی اجمالی",
-    "REAUTHORIZE": "Your inbox connection has expired, please reconnect\n to continue receiving and sending messages",
+    "REAUTHORIZE": "اتصال صندوق منقضی شده است. برای ادامه دریافت و ارسال پیام دوباره وصل شوید.",
     "HELP_CENTER": {
       "TITLE": "مرکز راهنما",
-      "ARTICLES": "Articles",
+      "ARTICLES": "مقاله‌ها",
       "CATEGORIES": "دسته‌بندی‌ها",
       "LOCALES": "زبان‌های محلی",
       "SETTINGS": "تنظیمات"
@@ -402,31 +402,31 @@
     "SET_AUTO_OFFLINE": {
       "TEXT": "علامت گذاری خودکار به صورت آفلاین",
       "INFO_TEXT": "هنگامی که از برنامه یا پیشخوان استفاده نمی‌کنید، به سیستم اجازه دهید به طور خودکار شما را به صورت آفلاین علامت گذاری کند.",
-      "INFO_SHORT": "Automatically mark offline when you aren't using the app."
+      "INFO_SHORT": "وقتی از برنامه استفاده نمی‌کنید، وضعیت به‌طور خودکار آفلاین می‌شود."
     },
     "SORT_TOOLTIP": "ترتیب",
     "SORT_BY": "مرتب‌سازی براساس",
     "SORT_GROUPS": {
-      "CREATED": "Sort by date of creation",
-      "ALPHABETICAL": "Sort in alphabetical order",
-      "UNREAD_COUNT": "Sort by unread count"
+      "CREATED": "مرتب‌سازی بر اساس تاریخ ایجاد",
+      "ALPHABETICAL": "مرتب‌سازی الفبایی",
+      "UNREAD_COUNT": "مرتب‌سازی بر اساس خوانده‌نشده"
     },
     "SORT_OPTIONS": {
-      "CREATED_DESC": "Newest first",
-      "CREATED_ASC": "Oldest first",
-      "ALPHABETICAL_ASC": "Ascending (A - Z)",
-      "ALPHABETICAL_DESC": "Descending (Z - A)",
-      "UNREAD_COUNT_DESC": "Highest first",
-      "UNREAD_COUNT_ASC": "Lowest first"
+      "CREATED_DESC": "جدیدترین اول",
+      "CREATED_ASC": "قدیمی‌ترین اول",
+      "ALPHABETICAL_ASC": "صعودی (الف تا ی)",
+      "ALPHABETICAL_DESC": "نزولی (ی تا الف)",
+      "UNREAD_COUNT_DESC": "بیشترین اول",
+      "UNREAD_COUNT_ASC": "کمترین اول"
     },
     "DOCS": "اسناد را بخوانید",
-    "SECURITY": "Security",
-    "CAPTAIN_AI": "Captain",
-    "CONVERSATION_WORKFLOW": "Conversation Workflow"
+    "SECURITY": "امنیت",
+    "CAPTAIN_AI": "کاپیتان",
+    "CONVERSATION_WORKFLOW": "گردش گفتگو"
   },
   "DATA_IMPORTS": {
-    "HEADER": "Data",
-    "DESCRIPTION": "Bring your existing contacts and past conversations into this account from another support tool. Each import runs in the background, so you can keep working while it finishes, track its progress, and review anything that was skipped along the way.",
+    "HEADER": "داده",
+    "DESCRIPTION": "مخاطبان و گفتگوهای قبلی را از ابزار پشتیبانی دیگری به این حساب بیاورید. هر ورود در پس‌زمینه انجام می‌شود تا بتوانید کار را ادامه دهید، پیشرفتش را ببینید و موارد ردشده را بررسی کنید.",
     "LOADING": "Fetching imports",
     "DEFAULT_IMPORT_NAME": "Intercom import",
     "DEFAULT_IMPORT_NAMES": {
@@ -470,9 +470,9 @@
     },
     "TABLE": {
       "TITLE": "Recent imports",
-      "EMPTY": "No imports yet",
-      "EMPTY_DESCRIPTION": "Start an import to bring your existing customer history into this account.",
-      "NEW_IMPORT": "تزریق کردن",
+      "EMPTY": "هنوز ورودی نیست",
+      "EMPTY_DESCRIPTION": "برای آوردن سابقه مشتری‌ها یک ورود شروع کنید.",
+      "NEW_IMPORT": "ورود تازه",
       "COUNT": "{count} imports",
       "UNNAMED": "Untitled import",
       "IMPORTED_COUNT": "{count} imported",
@@ -683,9 +683,9 @@
     }
   },
   "SECURITY_SETTINGS": {
-    "TITLE": "Security",
-    "DESCRIPTION": "Manage your account security settings.",
-    "LINK_TEXT": "Learn more about SAML SSO",
+    "TITLE": "امنیت",
+    "DESCRIPTION": "تنظیمات امنیتی حساب را مدیریت کنید.",
+    "LINK_TEXT": "درباره ورود یکپارچه SAML بیشتر بدانید",
     "SAML_DISABLED_MESSAGE": "SAML SSO is currently disabled. Please contact your administrator to enable this feature.",
     "NO_SETTINGS_AVAILABLE": "No security settings are available for this installation. Configure MFA encryption keys to enable two-factor enforcement.",
     "SAML": {
@@ -734,14 +734,14 @@
         "IDP_ENTITY_ID_ERROR": "Identity Provider Entity ID is required"
       },
       "ENTERPRISE_PAYWALL": {
-        "AVAILABLE_ON": "The SAML SSO feature is only available in the Enterprise plans.",
-        "UPGRADE_PROMPT": "Upgrade to an Enterprise plan to access SAML single sign-on and other advanced security features.",
-        "ASK_ADMIN": "لطفاً برای ارتقا با ادمین خود تماس بگیرید."
+        "AVAILABLE_ON": "ورود یکپارچه SAML فقط در طرح سازمانی است.",
+        "UPGRADE_PROMPT": "برای ورود یکپارچه SAML و امکانات امنیتی پیشرفته، به طرح سازمانی ارتقا دهید.",
+        "ASK_ADMIN": "برای ارتقا با مدیر خود تماس بگیرید."
       },
       "PAYWALL": {
-        "TITLE": "Upgrade to enable SAML SSO",
-        "AVAILABLE_ON": "The SAML SSO feature is only available in the Enterprise plans.",
-        "UPGRADE_PROMPT": "Upgrade your plan to get access to SAML single sign-on and other advanced features.",
+        "TITLE": "برای فعال کردن ورود یکپارچه SAML ارتقا دهید",
+        "AVAILABLE_ON": "ورود یکپارچه SAML فقط در طرح سازمانی است.",
+        "UPGRADE_PROMPT": "برای ورود یکپارچه SAML و امکانات امنیتی پیشرفته، طرح را ارتقا دهید.",
         "UPGRADE_NOW": "حالا ارتقا دهید",
         "CANCEL_ANYTIME": "You can change or cancel your plan anytime"
       },
@@ -758,8 +758,8 @@
   "CONVERSATION_WORKFLOW": {
     "INDEX": {
       "HEADER": {
-        "TITLE": "Conversation Workflows",
-        "DESCRIPTION": "Configure rules and required fields for conversation resolution."
+        "TITLE": "گردش گفتگو",
+        "DESCRIPTION": "قاعده‌ها و فیلدهای لازم برای حل گفتگو را تنظیم کنید."
       }
     },
     "REQUIRED_ATTRIBUTES": {

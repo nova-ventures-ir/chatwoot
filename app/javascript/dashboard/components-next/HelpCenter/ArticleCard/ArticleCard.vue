@@ -2,7 +2,7 @@
 import { computed, useTemplateRef } from 'vue';
 import { useToggle } from '@vueuse/core';
 import { useI18n } from 'vue-i18n';
-import { dynamicTime } from 'shared/helpers/timeHelper';
+import { localizedDynamicTime } from 'shared/helpers/timeHelper';
 import { useExactTimestamp } from 'shared/composables/useExactTimestamp';
 import {
   ARTICLE_MENU_ITEMS,
@@ -172,7 +172,7 @@ const authorThumbnailSrc = computed(() => {
 });
 
 const lastUpdatedAt = computed(() => {
-  return dynamicTime(props.updatedAt);
+  return localizedDynamicTime(props.updatedAt);
 });
 
 const handleArticleAction = ({ action, value }) => {

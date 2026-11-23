@@ -1,7 +1,7 @@
 <script setup>
 import { computed } from 'vue';
 import { frontendURL } from 'dashboard/helper/URLHelper';
-import { dynamicTime } from 'shared/helpers/timeHelper';
+import { localizedDynamicTime } from 'shared/helpers/timeHelper';
 import { useExactTimestamp } from 'shared/composables/useExactTimestamp';
 import { ARTICLE_STATUSES } from 'dashboard/helper/portalHelper';
 
@@ -33,7 +33,7 @@ const navigateTo = computed(() => {
 
 const updatedAtTime = computed(() => {
   if (!props.updatedAt) return '';
-  return dynamicTime(props.updatedAt);
+  return localizedDynamicTime(props.updatedAt);
 });
 
 const truncatedContent = computed(() => {

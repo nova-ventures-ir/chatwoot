@@ -13,6 +13,7 @@ import {
   requiresShopifyBilling,
 } from 'v3/helpers/AuthHelper';
 import AnalyticsHelper from '../helper/AnalyticsHelper';
+import { enforceEmbedRoute, rememberEmbedMode } from '../helper/embedMode';
 
 const ONBOARDING_STEPS = ['account_details', 'enrichment', 'inbox_setup'];
 const routes = [...dashboard.routes];
@@ -33,6 +34,7 @@ const shopifyBillingRedirect = query => {
 export const router = createRouter({ history: createWebHistory(), routes });
 
 export const validateAuthenticateRoutePermission = async (to, next) => {
+  rememberEmbedMode(to);
   const { isLoggedIn, getCurrentUser: user } = store.getters;
 
   if (!isLoggedIn) {
@@ -68,6 +70,8 @@ export const validateAuthenticateRoutePermission = async (to, next) => {
     window.location.assign(loginUrl);
     return '';
   }
+
+  if (enforceEmbedRoute(to, next)) return '';
 
   const { accounts = [], account_id: accountId } = user;
 

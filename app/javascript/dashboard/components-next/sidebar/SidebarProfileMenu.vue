@@ -19,6 +19,7 @@ import { openCommandBar } from 'dashboard/modules/command-bar/openCommandBar';
 
 defineProps({
   isCollapsed: { type: Boolean, default: false },
+  embedMode: { type: Boolean, default: false },
 });
 
 const emit = defineEmits(['close', 'openKeyShortcutModal']);
@@ -156,7 +157,7 @@ const allowedMenuItems = computed(() => {
           <div class="text-sm font-medium leading-4 truncate text-n-slate-12">
             {{ currentUser.available_name }}
           </div>
-          <div class="text-xs truncate text-n-slate-11">
+          <div v-if="!embedMode" class="text-xs truncate text-n-slate-11">
             {{ currentUser.email }}
           </div>
         </div>

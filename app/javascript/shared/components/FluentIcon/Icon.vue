@@ -28,6 +28,13 @@ export default {
   },
 
   computed: {
+    directionalClass() {
+      return ['chevron-left', 'chevron-right', 'arrow-right'].includes(
+        this.icon
+      )
+        ? 'rtl-directional-icon'
+        : null;
+    },
     pathSource() {
       // To support icons with multiple paths
       const path = this.icons[`${this.icon}-${this.type}`];
@@ -43,6 +50,7 @@ export default {
 <template>
   <svg
     v-if="iconLib === 'fluent'"
+    :class="directionalClass"
     :width="size"
     :height="size"
     fill="none"
@@ -58,6 +66,7 @@ export default {
   </svg>
   <svg
     v-else
+    :class="directionalClass"
     :width="size"
     :height="size"
     fill="none"

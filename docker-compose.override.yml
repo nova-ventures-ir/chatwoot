@@ -1,0 +1,10 @@
+# Local development: Rails/Vite run on the host; only infra services use Docker.
+# Trust auth matches empty POSTGRES_PASSWORD in .env for connecting from localhost.
+services:
+  postgres:
+    environment:
+      POSTGRES_HOST_AUTH_METHOD: trust
+    # Base compose publishes 5432 on all interfaces; sequences merge by append,
+    # so replace that mapping. Trust auth must stay reachable only on localhost.
+    ports: !override
+      - '127.0.0.1:5432:5432'

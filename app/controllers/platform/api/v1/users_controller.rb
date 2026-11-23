@@ -8,7 +8,10 @@ class Platform::Api::V1::UsersController < PlatformController
   def show; end
 
   def create
-    @resource = (User.from_email(user_params[:email]) || User.new(user_params))
+    existing = User.from_email(user_params[:email])
+    return render_taken_email if existing && !same_nova_user?(existing)
+
+    @resource = existing || User.new(user_params)
     validate_platform_app_permissible if @resource.persisted?
     return if performed?
 
@@ -56,5 +59,25 @@ class Platform::Api::V1::UsersController < PlatformController
 
   def user_params
     params.permit(:name, :display_name, :email, :password, custom_attributes: {})
+  end
+
+  def same_nova_user?(user)
+    requested = nova_user_attribute(user_params[:custom_attributes])
+    requested.present? && nova_user_attribute(user.custom_attributes) == requested
+  end
+
+  def nova_user_attribute(attributes)
+    return if attributes.blank?
+
+    attributes.to_h.with_indifferent_access['nova_user_id'].presence&.to_s
+  end
+
+  def render_taken_email
+    user = User.new
+    user.errors.add(:email, :taken)
+    render json: {
+      message: user.errors.full_messages.join(', '),
+      attributes: user.errors.attribute_names
+    }, status: :unprocessable_entity
   end
 end

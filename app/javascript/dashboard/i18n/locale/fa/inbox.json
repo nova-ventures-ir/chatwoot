@@ -1,7 +1,7 @@
 {
   "INBOX": {
     "LIST": {
-      "TITLE": "My Inbox",
+      "TITLE": "صندوق من",
       "DISPLAY_DROPDOWN": "نمایش",
       "LOADING": "در حال بارگیری اعلان ها",
       "404": "هیچ اعلان فعالی در این گروه نیست.",
@@ -26,20 +26,20 @@
       "SLA_MISSED_FIRST_RESPONSE": "سیاست SLA مربوط به اولین پاسخ در گفتگوی نقض شده",
       "SLA_MISSED_NEXT_RESPONSE": "سیاست SLA مربوط به پاسخ بعدی در گفتگوی نقض شده",
       "SLA_MISSED_RESOLUTION": "سیاست SLA مربوط به زمان حل موضوع در گفتگوی نقض شده",
-      "VOICE_CALL_MISSED": "Missed call"
+      "VOICE_CALL_MISSED": "تماس بی‌پاسخ"
     },
     "TYPES_NEXT": {
-      "CONVERSATION_MENTION": "Mentioned",
-      "CONVERSATION_ASSIGNMENT": "Assigned to you",
-      "CONVERSATION_CREATION": "New Conversation",
-      "SLA_MISSED_FIRST_RESPONSE": "SLA breach",
-      "SLA_MISSED_NEXT_RESPONSE": "SLA breach",
-      "SLA_MISSED_RESOLUTION": "SLA breach",
+      "CONVERSATION_MENTION": "به شما اشاره شد",
+      "CONVERSATION_ASSIGNMENT": "به شما واگذار شد",
+      "CONVERSATION_CREATION": "گفتگوی جدید",
+      "SLA_MISSED_FIRST_RESPONSE": "نقض زمان پاسخ اول",
+      "SLA_MISSED_NEXT_RESPONSE": "نقض زمان پاسخ بعدی",
+      "SLA_MISSED_RESOLUTION": "نقض زمان حل مسئله",
       "PARTICIPATING_CONVERSATION_NEW_MESSAGE": "پیام جدید",
       "ASSIGNED_CONVERSATION_NEW_MESSAGE": "پیام جدید",
-      "VOICE_CALL_MISSED": "Missed call",
-      "SNOOZED_UNTIL": "Snoozed for {time}",
-      "SNOOZED_ENDS": "Snooze ended"
+      "VOICE_CALL_MISSED": "تماس بی‌پاسخ",
+      "SNOOZED_UNTIL": "به تعویق تا {time}",
+      "SNOOZED_ENDS": "تعویق تمام شد"
     },
     "NO_CONTENT": "هیچ محتوایی موجود نیست",
     "MENU_ITEM": {
