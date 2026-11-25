@@ -13,6 +13,17 @@ import {
   CHATWOOT_SET_USER,
 } from '../../constants/appEvents';
 
+const isEmbeddedDashboard = () =>
+  typeof window !== 'undefined' && window.self !== window.top;
+
+const embeddedDashboardCookieAttrs = () => {
+  if (!isEmbeddedDashboard() || window.location.protocol !== 'https:') {
+    return {};
+  }
+
+  return { sameSite: 'None', secure: true, partitioned: true };
+};
+
 Cookies.defaults = { sameSite: 'Lax' };
 
 export const getLoadingStatus = state => state.fetchAPIloadingStatus;
@@ -32,6 +43,7 @@ export const setAuthCredentials = response => {
   const expiryDate = getHeaderExpiry(response);
   Cookies.set('cw_d_session_info', JSON.stringify(response.headers), {
     expires: differenceInDays(expiryDate, new Date()),
+    ...embeddedDashboardCookieAttrs(),
   });
   setUser(response.data.data, expiryDate);
 };

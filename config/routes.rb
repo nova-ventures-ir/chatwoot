@@ -16,6 +16,8 @@ Rails.application.routes.draw do
   else
     root to: 'dashboard#index'
 
+    match 'app/embed_sso', to: 'embed_sso#sso', via: [:get, :post]
+
     get '/app', to: 'dashboard#index'
     # Shareable install link for the Captain tools catalog; the dashboard picks the account and assistant
     get '/captain/toolsets/install', to: redirect(status: 302) { |_params, request|
