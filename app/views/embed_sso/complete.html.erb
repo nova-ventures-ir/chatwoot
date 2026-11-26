@@ -2,6 +2,6 @@
 <html>
 <head><meta charset="utf-8"></head>
 <body>
-<script>location.replace(<%= @destination.to_json %>)</script>
+<%= javascript_tag "location.replace(#{@destination.to_json})" %>
 </body>
 </html>
