@@ -26,6 +26,7 @@ RSpec.describe 'Embedded agent SSO', type: :request do
 
       expect(response).to have_http_status(:ok)
       expect(response.body).to include("/app/accounts/#{account.id}/conversations?embed=1")
+      expect(response.body).not_to include('location.replace(&quot;')
 
       cookie = response.cookies['cw_d_session_info']
       expect(cookie).to be_present
